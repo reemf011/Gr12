@@ -43,6 +43,7 @@ public class ClientRMI {
         } catch (Exception ex) {
             System.out.println("Exception occured");
         }
+          
     }
 }
   
