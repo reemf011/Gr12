@@ -3,45 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/MasterCard.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Seatdecorator.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/CustomerServiceMapper.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Visa.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Apartment.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/User.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Villa.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/CustomerServiceinterface.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/FlightTicket.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Property.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Flight_Feedback.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Hotel_Feedback.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Hotel.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/BookingFacade.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/FeedbackDetails.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/FirstClass.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Observer.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/BookingList.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/FacadeInterface.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Handler.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Subject.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Booking.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/AirportTaxi.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Payment.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/PrivateCar.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/PayPal.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/CustomerService.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/BaseHandler.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Economyclass.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/db.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/BookingDTO.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Admin.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/GithubDemo.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Car.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/CustomerMapper.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Room.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Car_Feedback.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Customer.java</file>
-            <file>file:/C:/Users/reemf/OneDrive/Desktop/aooseGrp12/src/githubdemo/Suite.java</file>
+            <file>file:/C:/Users/reemf/OneDrive/Desktop/Gr12/RMIServer/src/githubdemo/GithubDemo.java</file>
         </group>
     </open-files>
 </project-private>

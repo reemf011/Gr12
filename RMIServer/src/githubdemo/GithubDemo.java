@@ -54,7 +54,9 @@ public class GithubDemo {
 //              personalLoan.setSpecialOffers(20f);
 //              personalLoan.setSpecialOffers(30f);
 //              personalLoan.setSpecialOffers(50f);
-         }
+        
+    }
+   
 }
 
     
