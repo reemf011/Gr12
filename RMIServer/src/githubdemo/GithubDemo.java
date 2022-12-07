@@ -32,7 +32,7 @@ public class GithubDemo {
      
          Logger mongoLogger = Logger.getLogger("org.mongodb.driver");
         mongoLogger.setLevel(Level.SEVERE);
-        
+     
         //Calling the class for the database 
         db DB = new db();
         
