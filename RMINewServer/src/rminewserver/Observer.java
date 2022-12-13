@@ -9,6 +9,6 @@ package rminewserver;
  *
  * @author DeS
  */
-interface Observer {
-       public void update(float SpecialOffers);
+public interface Observer {
+       public void update(String SpecialOffers);
 }

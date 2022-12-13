@@ -21,11 +21,39 @@ public class RMINewServer {
 
     static Student s1;
     static Student s2;
+    static Car c1;
+    static Car c2;
 
     public static void main(String[] args) throws RemoteException, AlreadyBoundException {
         
         
-                   
+     Admin a = new Admin();
+     Customer cust1 = new Customer("Omar Samy","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 21211 5465",null,null,"Omar7863", "23212245");
+     
+     a.registerObserver(cust1);
+     
+     a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
+     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         Logger mongoLogger = Logger.getLogger("org.mongodb.driver");
         mongoLogger.setLevel(Level.SEVERE);
         
@@ -48,9 +76,17 @@ public class RMINewServer {
         s1 = new Student ("Meriam", 123, "Meriam12@yahoo.com");
         s2 = new Student ("Alaa", 1234, "Alaa19@yahoo.com");
         
+        c1 = new Car (1, 1 ,"Cairo","Private Car", 15000);
+        c2 = new Car (2, 3 ,"Tagmoa","Taxi", 100);
+        
         db.insertStudent(s1);
         db.insertStudent(s2);
-        
+       
+          db.insertCar(c1);
+          db.insertCar(c2);
+       
+          db.deleteCar(1);
+         db.deleteCar(2);
          db.close();
         } 
 
