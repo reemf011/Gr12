@@ -23,16 +23,18 @@ import java.util.UUID;
     ArrayList<BookingFacade> upcomingReportedBookings;
 
     
+
+
     public Customer(String name, String Email, String Gender, String DOB, String creditCardinfo, ArrayList<BookingFacade> oldReportedBooking, ArrayList<BookingFacade> upcomingReportedBookings, String userID, String Password) {
         super(userID, Password);
         this.name = name;
         this.Email = Email;
         this.Gender = Gender;
         this.DOB = DOB;
-
         this.creditCardinfo = creditCardinfo;
         this.oldReportedBooking = oldReportedBooking;
         this.upcomingReportedBookings = upcomingReportedBookings;
+        
     }
 
     public String getName() {
@@ -92,14 +94,8 @@ import java.util.UUID;
         this.upcomingReportedBookings = upcomingReportedBookings;
     }
 
-
-
-    
-     
- 
-
-
-
+   
+/* Observer Design Pattren: update functoin to update the users with the special offers Reem 197957*/    
     @Override
     public void update(String SpecialOffers) {
         System.out.println(name+"recieved the exculsive Recieved Offers"+ name);
@@ -107,6 +103,7 @@ import java.util.UUID;
     }
     
   
+    
 
   
   

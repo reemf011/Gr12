@@ -16,6 +16,11 @@ public interface Payment {
     String payment_status="";
     String payment_Type="";
     
+    
+    
+    
+    
+    
     public void CancelPayment();
     public void AddPayment();
     public void EditPayment();

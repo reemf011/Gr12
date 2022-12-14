@@ -17,17 +17,21 @@ import java.util.ArrayList;
      
       private ArrayList<Observer> observers = new ArrayList<Observer>();
       private float SpecialOffers;
+     
       Admin instance;
 
     public Admin(float SpecialOffers, Admin instance, String userID, String Password) {
         super(userID, Password);
         this.SpecialOffers = SpecialOffers;
+       
         this.instance = instance;
     }
 
 
 
 
+
+// Observers functions - Reem 197957
     public ArrayList<Observer> getObservers() {
         return observers;
     }
@@ -43,9 +47,7 @@ import java.util.ArrayList;
     public void setSpecialOffers(float SpecialOffers) {
         this.SpecialOffers = SpecialOffers;
     }
-
-
-       
+    
     public void SendingOffers(String SpecialOffers) {
       // System.out.println("Sending offers...");
         notifyObservers(SpecialOffers);
@@ -70,7 +72,11 @@ import java.util.ArrayList;
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
- 
+ // Read-only design pattern - sheroq Hesham 199818
+    
+    
+
+    
     public Admin getInstance(){return null;}
     public void generatereport(){}
     public void sendcopun(){}

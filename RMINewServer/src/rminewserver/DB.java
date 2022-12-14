@@ -41,21 +41,42 @@ public class DB {
         mongoClient = new MongoClient();
         // Database name
         database = mongoClient.getDatabase("ReservationSytem"); 
-       // collection1 = database.getCollection("Customer"); 
+        collection1 = database.getCollection("Customer"); 
         collection2 = database.getCollection("Car"); 
-    
-  
+      }
    
-    }
-   
-         public void insertStudent(Student s) 
+         public void insertCustomer(Customer c) 
     {
-        collection1.insertOne(Document.parse(gson.toJson(s)));
+        collection1.insertOne(Document.parse(gson.toJson(c)));
         System.out.println("Customer is inserted is inserted.");
     }
-        public void deleteStudent(String name) {
+         
+        // update customer in the customer collection
+        public Customer getCustomegrEmail(String Email) {
+        Document doc = collection2.find(Filters.eq("customer's email", Email)).first();
+        Customer result = gson.fromJson(doc.toJson(), Customer.class);
+        return result;
+    }
+        
+        
+        public void updateCustomer(Customer c) {
+        Document doc = Document.parse(gson.toJson(c));
+        collection2.replaceOne(Filters.eq("customer's email", c.getEmail()), doc);
+    }
+        
+        
+        public void updateCustomerEmail( String name,String newEmail) {
+       
+        collection2.updateOne(Filters.eq("customer's name",name), Updates.set("Email",newEmail));
+    }
+        
+         
+         
+         
+         
+        public void deleteCustomer(String name) {
         collection1.deleteOne(Filters.eq("name", name));
-        System.out.println("Student is deleted");
+        System.out.println("Customer is deleted");
     }
 
         
