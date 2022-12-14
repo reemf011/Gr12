@@ -3,25 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package githubdemo;
+package rminewserver;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import rmi.BookHotelInterface;
 
 /**
  *
  * @author DeS
  */
-public class Hotel {
+public class Hotel implements BookHotelInterface {
+    
+        
+     
     int Hotel_Id;
     String Hotel_Name;
-    String Hotel_Description;
     String Hotel_Address;
     double Hotel_Price;
     int Room_Count;
     int Suite_Count;
 
-    public Hotel(int Hotel_Id, String Hotel_Name, String Hotel_Description, String Hotel_Address, double Hotel_Price, int Room_Count, int Suite_Count) {
+    public Hotel(int Hotel_Id, String Hotel_Name, String Hotel_Address, double Hotel_Price, int Room_Count, int Suite_Count) {
         this.Hotel_Id = Hotel_Id;
         this.Hotel_Name = Hotel_Name;
-        this.Hotel_Description = Hotel_Description;
         this.Hotel_Address = Hotel_Address;
         this.Hotel_Price = Hotel_Price;
         this.Room_Count = Room_Count;
@@ -42,14 +47,6 @@ public class Hotel {
 
     public void setHotel_Name(String Hotel_Name) {
         this.Hotel_Name = Hotel_Name;
-    }
-
-    public String getHotel_Description() {
-        return Hotel_Description;
-    }
-
-    public void setHotel_Description(String Hotel_Description) {
-        this.Hotel_Description = Hotel_Description;
     }
 
     public String getHotel_Address() {
@@ -83,9 +80,17 @@ public class Hotel {
     public void setSuite_Count(int Suite_Count) {
         this.Suite_Count = Suite_Count;
     }
-    public void SearchHotel(){}
-    public void BookHotel(){}
-    public void GiveFeedback(){}
+
+    
+
+    public void SearchHotel(){
+    }
+    public void BookHotel()
+    {}
+    public void GiveFeedback()
+    {
+    
+    }
     public void RateHotel(){}
             
            

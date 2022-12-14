@@ -23,22 +23,26 @@ public class RMINewServer {
     static Customer s2;
     static Car c1;
     static Car c2;
+    static Hotel h1;
+    static Hotel h2;
 
     public static void main(String[] args) throws RemoteException, AlreadyBoundException {
         
       //Observer Design Pattern Application - Reem 197957   
      Admin a = new Admin();
-     Customer cust1 = new Customer("Omar Samy","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 21211 5465",null,null,"Omar7863", "23212245");
+     //Customer cust1 = new Customer("Omar","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 2121 5465",null,null,"Omar7863", "23212245");
      
      a.registerObserver(cust1);
      
      a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
      
+     
+     
       //Singleton Design Pattern Application - Sheroq 199818
       SingeltonClass object = SingeltonClass.getInstance();
         object.showMessage();
         
-      //  
+       
        
     
         
@@ -86,15 +90,28 @@ public class RMINewServer {
         c1 = new Car (1, 1 ,"Cairo","Private Car", 15000);
         c2 = new Car (2, 3 ,"Tagmoa","Taxi", 100);
         
+        h1 = new Hotel (1, "Marriot Resort" ,"Cairo",5000,500, 300);
+        h1 = new Hotel (2, "Kimpinsiki Hotel" ,"Cairo",10000,600, 400);
+         
+
+        
         db.insertCustomer(s1);
         db.insertCustomer(s2);
        
-          db.insertCar(c1);
-          db.insertCar(c2);
+        db.insertCar(c1);
+        db.insertCar(c2);
        
-          db.deleteCar(1);
-         db.deleteCar(2);
-         db.close();
+        db.updateCar(c1);
+        db.updateCar(c2);
+
+        db.deleteCar(1);
+        db.deleteCar(2);
+        
+        db.getHotelName("Marriot Resort");
+                
+        
+        
+        db.close();
         } 
 
 

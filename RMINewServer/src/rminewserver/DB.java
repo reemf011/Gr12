@@ -26,7 +26,7 @@ public class DB {
     
    MongoCollection<Document> collection1;
    MongoCollection<Document> collection2;
-
+   MongoCollection<Document> collection3;
   
    public static Gson gson = new Gson();
     
@@ -42,9 +42,39 @@ public class DB {
         // Database name
         database = mongoClient.getDatabase("ReservationSytem"); 
         collection1 = database.getCollection("Customer"); 
-        collection2 = database.getCollection("Car"); 
+        collection2 = database.getCollection("Car");
+        collection3 = database.getCollection("Hotel");
       }
    
+         public void insertHotel(Hotel h) 
+    {
+        collection3.insertOne(Document.parse(gson.toJson(h)));
+        System.out.println("Hotel is inserted successfully.");
+    }
+         
+        // update customer in the customer collection
+        public Hotel getHotelName(String Hotel_Name) {
+        Document doc = collection3.find(Filters.eq("hotel name", Hotel_Name)).first();
+        Hotel Result = gson.fromJson(doc.toJson(), Hotel.class);
+        return Result;
+    }
+        
+        
+        public void updateHotel(Hotel h) {
+        Document doc = Document.parse(gson.toJson(h));
+        collection3.replaceOne(Filters.eq("Hotel's Name", h.getHotel_Name()), doc);
+    }
+        
+        
+        public void updateHotelName( String name,String newRoomCnt) {
+       
+        collection3.updateOne(Filters.eq("Hotel's name",name), Updates.set("Room_Count",newRoomCnt));
+    }
+
+       
+       
+       
+       
          public void insertCustomer(Customer c) 
     {
         collection1.insertOne(Document.parse(gson.toJson(c)));

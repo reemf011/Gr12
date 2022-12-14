@@ -37,7 +37,7 @@ public class Room {
     public void setCheckOut(String CheckOut) {
         this.CheckOut = CheckOut;
     }
-      public void AddRoom(){}
+    public void AddRoom(){}
     public void EditRoom(){}
     public void CancelRoom(){}
     public void RateRoom(){}

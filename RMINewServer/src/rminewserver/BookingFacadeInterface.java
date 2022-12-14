@@ -11,8 +11,8 @@ import java.rmi.RemoteException;
  *
  * @author reemf011
  */
-public interface FacadeInterface {
+public interface BookingFacadeInterface {
    public void SetBookingData(int booking_ID, String booking_date, String booking_status)throws RemoteException;
    public String getBookingData()throws RemoteException;
-   public BookingDTO getCourse() throws RemoteException;
+   public BookingDTO getBooking() throws RemoteException;
 }
