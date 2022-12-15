@@ -20,12 +20,18 @@ import java.util.ArrayList;
      
       Admin instance;
 
+  
+      
     public Admin(float SpecialOffers, Admin instance, String userID, String Password) {
         super(userID, Password);
         this.SpecialOffers = SpecialOffers;
        
         this.instance = instance;
     }
+
+    Admin() {}
+
+   
 
 
 

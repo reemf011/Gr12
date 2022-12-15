@@ -32,7 +32,7 @@ public class RMINewServer {
      Admin a = new Admin();
      //Customer cust1 = new Customer("Omar","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 2121 5465",null,null,"Omar7863", "23212245");
      
-     a.registerObserver(cust1);
+     a.registerObserver(s1);//cust1
      
      a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
      
