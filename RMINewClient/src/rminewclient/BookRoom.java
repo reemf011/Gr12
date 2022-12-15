@@ -5,6 +5,7 @@
  */
 package rminewclient;
 
+//import roommanager.Options;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -130,8 +131,8 @@ public class BookRoom extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonBookActionPerformed
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
-        new Options().setVisible(true);
-        this.setVisible(false);
+       // new Options().setVisible(true);
+       // this.setVisible(false);
     }//GEN-LAST:event_jButtonBackActionPerformed
 
     /**

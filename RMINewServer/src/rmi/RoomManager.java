@@ -9,7 +9,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.sql.Array;
 import java.util.*;
-import rminewclient.Room;
+import rminewserver.Room;
 
 public interface RoomManager extends Remote{
     
