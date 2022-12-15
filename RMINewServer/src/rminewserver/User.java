@@ -15,6 +15,10 @@ public abstract class User {
     String userID;
     String Password;
 
+    public User() {
+    }
+    
+
     public User(String userID, String Password) {
         this.userID = userID;
         this.Password = Password;

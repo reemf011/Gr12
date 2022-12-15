@@ -29,5 +29,7 @@ public class Property {
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
-    public void Book(){}
+    public void Book(){
+    
+    }
 }
