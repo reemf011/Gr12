@@ -61,13 +61,13 @@ import java.util.ArrayList;
     @Override
     public void registerObserver(Observer observer) {
         observers.add(observer);
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void removeObserver(Observer observer) {
         observers.remove(observer);
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -75,7 +75,7 @@ import java.util.ArrayList;
         for(int i=0; i < observers.size();i++){
           observers.get(i).update(SpecialOffers);
         }
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
  // Read-only design pattern - sheroq Hesham 199818

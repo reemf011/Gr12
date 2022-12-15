@@ -5,7 +5,6 @@
  */
 package rminewserver;
 
-import static com.google.gson.internal.bind.TypeAdapters.UUID;
 import java.util.ArrayList;
 import java.util.UUID;
 
