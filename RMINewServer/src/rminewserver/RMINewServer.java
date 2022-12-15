@@ -29,15 +29,15 @@ public class RMINewServer {
     public static void main(String[] args) throws RemoteException, AlreadyBoundException {
         
       //Observer Design Pattern Application - Reem 197957   
-     Admin a = new Admin();
-     //Customer cust1 = new Customer("Omar","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 2121 5465",null,null,"Omar7863", "23212245");
-     
-     a.registerObserver(cust1);
-     
-     a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
-     
-     
-     
+//     Admin a = new Admin();
+//     Customer cust1 = new Customer("Omar","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 2121 5465",null,null,"Omar7863", "23212245");
+//     
+//     a.registerObserver(cust1);
+//     
+//     a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
+//     
+//     
+//     
       //Singleton Design Pattern Application - Sheroq 199818
       SingeltonClass object = SingeltonClass.getInstance();
         object.showMessage();
@@ -84,8 +84,8 @@ public class RMINewServer {
         System.out.println("The server is ready");
         
         
-        s1 = new Customer ("Meriam", "Meriam12@yahoo.com", "Female", "12/11/2002","2121 2154 6565", null, null, "Mariam121", "121dB454");
-        s2 = new Customer ("Abdelrahman", "abdo13@yahoo.com", "Male", "12/3/1998","5665 5455 5523 4545", null, null, "Hgrs121", "515215BB");
+//        s1 = new Customer ("Meriam", "Meriam12@yahoo.com", "Female", "12/11/2002","2121 2154 6565", null, null, "Mariam121", "121dB454");
+//        s2 = new Customer ("Abdelrahman", "abdo13@yahoo.com", "Male", "12/3/1998","5665 5455 5523 4545", null, null, "Hgrs121", "515215BB");
         
         c1 = new Car (1, 1 ,"Cairo","Private Car", 15000);
         c2 = new Car (2, 3 ,"Tagmoa","Taxi", 100);
