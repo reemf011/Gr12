@@ -3,9 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rminewserver;
+package rminewclient;
 
 import java.io.Serializable;
+
+/**
+ *
+ * @author reemf011
+ */
+
+    /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+
 
 
 public class Room implements Serializable{
@@ -77,4 +91,6 @@ public class Room implements Serializable{
     }
 
 }
+
+
 

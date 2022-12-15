@@ -6,6 +6,8 @@
 package rminewserver;
 
 import java.rmi.RemoteException;
+import java.rmi.server.RMIClientSocketFactory;
+import java.rmi.server.RMIServerSocketFactory;
 import java.rmi.server.UnicastRemoteObject;
 /**
  *
@@ -18,14 +20,33 @@ public class BookingFacade extends UnicastRemoteObject implements BookingFacadeI
  * and open the template in the editor.
  */
     Booking b;
-    public BookingFacade() throws RemoteException{
-           b = new Booking(0, "", "","","");
+    
+//         public BookingFacade(Booking b) {
+//        this.b = b;
+//    }
+//    
+
+    public BookingFacade(Booking b) throws RemoteException {
+        this.b = b;
     }
 
-    // public BookingFacade(Booking b) {
-      //  this.b = b;
-    //}
+    public BookingFacade(Booking b, int port) throws RemoteException {
+        super(port);
+        this.b = b;
+    }
+
+    public BookingFacade(Booking b, int port, RMIClientSocketFactory csf, RMIServerSocketFactory ssf) throws RemoteException {
+        super(port, csf, ssf);
+        this.b = b;
+    }
     
+
+
+    public BookingFacade() throws RemoteException {
+        b = new Booking(0, "", "","","");
+    }
+
+
    
     @Override
     public void SetBookingData(int booking_ID, String booking_date, String booking_status)throws RemoteException {
