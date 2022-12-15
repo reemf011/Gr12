@@ -30,15 +30,15 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import rmi.RoomManager;
 
-public class guest extends JFrame{
+public class Customer extends JFrame{
     
     private JPanel contentPane;
     private JTable table;
     private JLabel label1;
     private JButton btn1;
     
-    public guest() throws RemoteException, NotBoundException {
-		super("Guest list");
+    public Customer() throws RemoteException, NotBoundException {
+		super("Customer list");
 		
 		
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
