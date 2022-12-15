@@ -29,15 +29,15 @@ public class RMINewServer {
     public static void main(String[] args) throws RemoteException, AlreadyBoundException {
         
       //Observer Design Pattern Application - Reem 197957   
-//     Admin a = new Admin();
-//     Customer cust1 = new Customer("Omar","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 2121 5465",null,null,"Omar7863", "23212245");
-//     
-//     a.registerObserver(cust1);
-//     
-//     a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
-//     
-//     
-//     
+     Admin a = new Admin();
+     Customer cust1 = new Customer("Omar","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 2121 5465",null,null,"Omar7863", "23212245");
+     
+     a.registerObserver(cust1);
+     
+     a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
+     
+     
+     
       //Singleton Design Pattern Application - Sheroq 199818
       SingeltonClass object = SingeltonClass.getInstance();
         object.showMessage();

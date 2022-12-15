@@ -5,40 +5,76 @@
  */
 package rminewserver;
 
-/**
- *
- * @author DeS
- */
-public class Room {
-    int Room_number;
-    String CheckIn;
-    String CheckOut;
+import java.io.Serializable;
 
-    public int getRoom_number() {
-        return Room_number;
+
+public class Room implements Serializable{
+    String roomId;
+    int roomType;
+    int roomPrice;
+    String roomDetails;
+    int roomQuantity;
+    int roomAvailable;
+   
+
+    public Room(String roomId, int roomType, int roomPrice, String roomDetails,int roomQuantity,int roomAvailable) {
+        roomId = this.roomId;
+    	roomType = this.roomType;
+        roomPrice = this.roomPrice;
+        roomDetails = this.roomDetails;
+        roomQuantity = this.roomQuantity;
+        roomAvailable= this.roomAvailable;
     }
 
-    public void setRoom_number(int Room_number) {
-        this.Room_number = Room_number;
+
+
+    public String getRoomId() {
+        return roomId;
     }
 
-    public String getCheckIn() {
-        return CheckIn;
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
     }
 
-    public void setCheckIn(String CheckIn) {
-        this.CheckIn = CheckIn;
+    public int getRoomType() {
+        return roomType;
     }
 
-    public String getCheckOut() {
-        return CheckOut;
+    public void setRoomType(int roomType) {
+        this.roomType = roomType;
     }
 
-    public void setCheckOut(String CheckOut) {
-        this.CheckOut = CheckOut;
+    public int getRoomPrice() {
+        return roomPrice;
     }
-    public void AddRoom(){}
-    public void EditRoom(){}
-    public void CancelRoom(){}
-    public void RateRoom(){}
+
+    public void setRoomPrice(int roomPrice) {
+        this.roomPrice = roomPrice;
+    }
+
+    public String getRoomDetails() {
+        return roomDetails;
+    }
+
+    public void setRoomDetails(String roomDetails) {
+        this.roomDetails = roomDetails;
+    }
+
+    public int getRoomQuantity() {
+        return roomQuantity;
+    }
+
+    public void setRoomQuantity(int roomQuantity) {
+        this.roomQuantity = roomQuantity;
+    }
+
+    public int getRoomAvailable() {
+        return roomAvailable;
+    }
+
+    public void setRoomAvailable(int roomAvailable) {
+        this.roomAvailable = roomAvailable;
+    }
+
 }
+
