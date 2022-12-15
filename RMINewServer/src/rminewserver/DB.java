@@ -55,7 +55,7 @@ public class DB {
         System.out.println("Hotel is inserted successfully.");
     }
          
-        // update customer in the customer collection
+        // update hotel in the hotel collection
         public Hotel getHotelName(String Hotel_Name) {
         Document doc = collection3.find(Filters.eq("hotel name", Hotel_Name)).first();
         Hotel Result = gson.fromJson(doc.toJson(), Hotel.class);
@@ -105,10 +105,9 @@ public class DB {
         
          
          
-         
-         
-        public void deleteCustomer(String name) {
-        collection1.deleteOne(Filters.eq("name", name));
+       
+        public void deleteCustomer(Customer c1) {
+        collection1.deleteOne( Document.parse(gson.toJson(c1)));
         System.out.println("Customer is deleted");
     }
 

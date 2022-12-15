@@ -16,16 +16,13 @@ import java.util.ArrayList;
  public class Admin extends User implements Subject  {
      
       private ArrayList<Observer> observers = new ArrayList<Observer>();
-      private float SpecialOffers;
      
       Admin instance;
 
   
       
-    public Admin(float SpecialOffers, Admin instance, String userID, String Password) {
+    public Admin( Admin instance, String userID, String Password) {
         super(userID, Password);
-        this.SpecialOffers = SpecialOffers;
-       
         this.instance = instance;
     }
 
@@ -38,36 +35,19 @@ import java.util.ArrayList;
 
 
 // Observers functions - Reem 197957
-    public ArrayList<Observer> getObservers() {
-        return observers;
-    }
-
-    public void setObservers(ArrayList<Observer> observers) {
-        this.observers = observers;
-    }
-
-    public float getSpecialOffers() {
-        return SpecialOffers;
-    }
-
-    public void setSpecialOffers(float SpecialOffers) {
-        this.SpecialOffers = SpecialOffers;
-    }
-    
-    public void SendingOffers(String SpecialOffers) {
-      // System.out.println("Sending offers...");
+    public void reportOffers(String SpecialOffers) {
+        System.out.println("Sending Offers...");
         notifyObservers(SpecialOffers);
     }
+    
     @Override
     public void registerObserver(Observer observer) {
         observers.add(observer);
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void removeObserver(Observer observer) {
         observers.remove(observer);
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -75,7 +55,6 @@ import java.util.ArrayList;
         for(int i=0; i < observers.size();i++){
           observers.get(i).update(SpecialOffers);
         }
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
  // Read-only design pattern - sheroq Hesham 199818
@@ -85,7 +64,7 @@ import java.util.ArrayList;
     
     public Admin getInstance(){return null;}
     public void generatereport(){}
-    public void sendcopun(){}
+    public void sendcopun(){} //sending offers to normal subscriobers
     public void displayreportedbooking(){}
 
     public void generateSalesReport(){}

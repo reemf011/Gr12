@@ -34,7 +34,7 @@ public class RMINewServer {
      
      a.registerObserver(cust1);
      
-     a.SendingOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
+     a.reportOffers("there is 20% off vouchers on luxuries hotels in Monaco ");
      
      
      
@@ -84,20 +84,27 @@ public class RMINewServer {
         System.out.println("The server is ready");
         
         
-//        s1 = new Customer ("Meriam", "Meriam12@yahoo.com", "Female", "12/11/2002","2121 2154 6565", null, null, "Mariam121", "121dB454");
-//        s2 = new Customer ("Abdelrahman", "abdo13@yahoo.com", "Male", "12/3/1998","5665 5455 5523 4545", null, null, "Hgrs121", "515215BB");
+      s1 = new Customer ("Meriam", "Meriam12@yahoo.com", "Female", "12/11/2002","2121 2154 6565", null, null, "Mariam121", "121dB454");
+     s2 = new Customer ("Abdelrahman", "abdo13@yahoo.com", "Male", "12/3/1998","5665 5455 5523 4545", null, null, "Hgrs121", "515215BB");
         
         c1 = new Car (1, 1 ,"Cairo","Private Car", 15000);
         c2 = new Car (2, 3 ,"Tagmoa","Taxi", 100);
         
         h1 = new Hotel (1, "Marriot Resort" ,"Cairo",5000,500, 300);
-        h1 = new Hotel (2, "Kimpinsiki Hotel" ,"Cairo",10000,600, 400);
+        h2 = new Hotel (2, "Kimpinsiki Hotel" ,"Cairo",10000,600, 400);
          
 
         
         db.insertCustomer(s1);
         db.insertCustomer(s2);
        
+        db.deleteCustomer(s1);
+        db.deleteCustomer(s2);
+        
+        
+        
+        
+        
         db.insertCar(c1);
         db.insertCar(c2);
        
@@ -107,7 +114,12 @@ public class RMINewServer {
         db.deleteCar(1);
         db.deleteCar(2);
         
-        db.getHotelName("Marriot Resort");
+        
+        db.insertHotel(h1);
+        db.insertHotel(h2);
+
+        
+      //  db.getHotelName("Marriot Resort");
                 
         
         

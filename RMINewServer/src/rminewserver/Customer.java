@@ -97,8 +97,8 @@ import java.util.UUID;
 /* Observer Design Pattren: update functoin to update the users with the special offers Reem 197957*/    
     @Override
     public void update(String SpecialOffers) {
-        System.out.println(name+"recieved the exculsive Recieved Offers"+ name);
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(name+" "+"recieved the exculsive Offers");
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
   
