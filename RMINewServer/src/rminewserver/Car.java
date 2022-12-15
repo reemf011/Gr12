@@ -5,11 +5,9 @@
  */
 package rminewserver;
 import com.mongodb.MongoClient;
-import com.mongodb.client.model.Filters;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
-import org.bson.Document;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import com.google.gson.Gson;
