@@ -27,6 +27,7 @@ public class DB {
    MongoCollection<Document> collection1;
    MongoCollection<Document> collection2;
    MongoCollection<Document> collection3;
+   MongoCollection<Document> collection4;
   
    public static Gson gson = new Gson();
     
@@ -44,6 +45,8 @@ public class DB {
         collection1 = database.getCollection("Customer"); 
         collection2 = database.getCollection("Car");
         collection3 = database.getCollection("Hotel");
+        collection4 = database.getCollection("CustomerService");
+        
       }
    
          public void insertHotel(Hotel h) 
