@@ -22,9 +22,9 @@ public class BookingFacade extends UnicastRemoteObject implements BookingFacadeI
            b = new Booking(0, "", "","","");
     }
 
-    public BookingFacade(Booking b) {
-        this.b = b;
-    }
+    // public BookingFacade(Booking b) {
+      //  this.b = b;
+    //}
     
    
     @Override
