@@ -16,7 +16,17 @@ public class Villa {
     String start_date;
     String end_date;
     double V_price;
+    String Location;
 
+    public String getLocation() {
+        return Location;
+    }
+
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+    
+    
     public void setVilla_Id(int Villa_Id) {
         this.Villa_Id = Villa_Id;
     }
@@ -27,6 +37,14 @@ public class Villa {
 
     public void setOwner(String Owner) {
         this.Owner = Owner;
+    }
+
+    public String getStart_date() {
+        return start_date;
+    }
+
+    public String getEnd_date() {
+        return end_date;
     }
     
 }
