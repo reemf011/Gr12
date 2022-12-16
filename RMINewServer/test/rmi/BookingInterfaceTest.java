@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package rmi;
 
@@ -12,22 +13,20 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-import java.rmi.RemoteException;
-import java.util.ArrayList;
 import rminewserver.Database;
 
 /**
  *
- * @author note book
+ * @author notebook
  */
-public class loginTest {
+public class BookingInterfaceTest {
+    
     Database db;
-    TranscriptInterface instance;
-    public TranscriptInterfaceTest() throws RemoteException {
+    BookingFacadeInterface instance;
+    public BookingInterfaceTest() throws RemoteException {
         db = new Database();
-        db.GetCollection("Transcript");
-        instance = new Transcript(db);
+        db.GetCollection("Bookings");
+        instance = new Bookings(db);
     }
     
     @BeforeClass
@@ -47,11 +46,12 @@ public class loginTest {
     }
 
     /**
-     * Test of AddTranscript method, of class TranscriptInterface.
+     * Test of add booking method
      */
+    
     @Test
-    public void testAddTranscript() throws Exception {
-        System.out.println("AddTranscript");
+    public void testAddBooking() throws Exception {
+        System.out.println("AddBooking");
         int TranscriptID = 892191;
         int StudentID = 12;
         int CourseID = 5;
@@ -65,7 +65,7 @@ public class loginTest {
     }
 
     /**
-     * Test of ViewTranscript method, of class TranscriptInterface.
+     * Test of view booking method
      */
     @Test
     public void testViewTranscript() throws Exception {
@@ -78,25 +78,21 @@ public class loginTest {
     }
 
 
-    public class TranscriptInterfaceImpl implements TranscriptInterface {
+    public class BookingInterfaceImpl implements BookingFacadeInterface {
 
-        public boolean AddTranscript(int TranscriptID, int StudentID, int CourseID, char StudentGrade, String TransicriptDate, String UpdatedDate, boolean IsRequested) throws RemoteException {
+        public boolean AddBooking(int TranscriptID, int StudentID, int CourseID, char StudentGrade, String TransicriptDate, String UpdatedDate, boolean IsRequested) throws RemoteException {
             return false;
         }
 
-        public boolean EditTranscript(int TranscriptID, int StudentID, int CourseID, char StudentGrade, String TransicriptDate, String UpdatedDate, boolean IsRequested) throws RemoteException {
+        public boolean EditBooking(int TranscriptID, int StudentID, int CourseID, char StudentGrade, String TransicriptDate, String UpdatedDate, boolean IsRequested) throws RemoteException {
             return false;
         }
 
-        public boolean deleteTranscript(String type, int id, String type2, int id2) throws RemoteException {
+        public boolean deleteBooking(String type, int id, String type2, int id2) throws RemoteException {
             return false;
         }
 
-        public boolean RequestCertificate(int type, int paymentID, int studentID, String date, int courseID, double amount) throws RemoteException {
-            return false;
-        }
-
-        public String ViewTranscript(int Sid, int Cid) throws RemoteException {
+        public String ViewBooking(int Sid, int Cid) throws RemoteException {
             return "";
         }
 
@@ -106,4 +102,3 @@ public class loginTest {
     }
     
 }
-

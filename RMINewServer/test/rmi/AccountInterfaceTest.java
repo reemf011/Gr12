@@ -1,9 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package rmi;
-
 
 import java.rmi.RemoteException;
 import org.junit.After;
@@ -12,22 +12,22 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-import java.rmi.RemoteException;
 import rminewserver.Database;
+import rminewserver.User;
 
 /**
  *
- * @author note book
+ * @author notebook
  */
-public class accountTest {
-    Database db;
-    accountTest instance;
+public class AccountInterfaceTest {
 
-    public accountTest() throws RemoteException {
+    Database db;
+    AccountInterface instance;
+
+    public AccountInterfaceTest() throws RemoteException {
         db = new Database();
         db.GetCollection("Account");
-        instance = new Account(db);
+        instance = new User(db);
     }
 
     @BeforeClass
@@ -87,7 +87,7 @@ public class accountTest {
         String user = "Dragon@bue.edu.eg";
         String pass = "8719201";
         String type = "TeachingAssistant";
-        instance = new Account(db);
+        instance = new User(db);
         int expResult = 91;
         int result = instance.Login(user, pass, type);
         assertEquals(expResult, result);
@@ -116,7 +116,7 @@ public class accountTest {
         - To test enter an existing account 
     */
     @Test
-    public void testEditAccount() throws Exception {
+    public void testEditAccount() throws RemoteException {
         System.out.println("EditAccount");
         int id = 0;
         String Email = "Vlad@bue.edu.eg";
@@ -125,7 +125,7 @@ public class accountTest {
         String newpassword = "68798089";
         String Password = "687980";
         String type = "Professor";
-        instance = new Account(db);
+        instance = new User(db);
         boolean expResult = true;
         boolean result = instance.EditAccount(id, Email, Username, Newusername, newpassword, Password, type);
         assertEquals(expResult, result);
@@ -162,5 +162,5 @@ public class accountTest {
             return false;
         }
     }
-}
 
+}
