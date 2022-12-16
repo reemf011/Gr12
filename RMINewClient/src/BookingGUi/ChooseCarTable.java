@@ -163,7 +163,7 @@ public class ChooseCarTable extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 550, 110));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 550, 130));
 
         Mercedesbtn.setText("Mercedes");
         Mercedesbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +203,6 @@ public class ChooseCarTable extends javax.swing.JFrame {
         jLabel1.setOpaque(true);
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 40));
 
-        bookCarbtn.setBackground(new java.awt.Color(255, 255, 255));
         bookCarbtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         bookCarbtn.setText("Book Car");
         bookCarbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +237,7 @@ public class ChooseCarTable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MercedesbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MercedesbtnActionPerformed
-        ;
+        
     }//GEN-LAST:event_MercedesbtnActionPerformed
 
     private void KiabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KiabtnActionPerformed

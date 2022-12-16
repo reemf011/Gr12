@@ -4,12 +4,16 @@
  */
 package rminewserver;
 
+import java.rmi.RemoteException;
+
 /**
  *
  * @author note book
  */
 public interface PaymentStrategy
 {
-    public void pay(String amount);
+    public boolean Pay(int type, int PaymentID, int UserID, String date, double amount) throws RemoteException;
+    public String ViewPayment(String type, int pID) throws RemoteException;
+    public boolean AddPayment(int paymeID, int UserID, String date, double amount) throws RemoteException;
 
 }
