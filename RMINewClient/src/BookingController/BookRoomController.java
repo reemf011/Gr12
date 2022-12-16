@@ -14,10 +14,10 @@ import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
-import rmi.BookingInterface;
-import rmi.CustomerBookingReadOnly;
+//import rmi.BookingInterface;
+import rmi.CustomerBookingROI;
 import BookingGUi.BookRoom;
-import CustomerGUi.MainMenu;
+import CustomerGUi.CustomerMenu;
 import CustomerGUi.CustomerMenu;
 import CustomerController.CustomerMenuController;
 import CustomerController.CustomerMenuController;
@@ -83,9 +83,10 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
+        
                CustomerBookingRIO booking = (CustomerBookingRIO) r.lookup("booking");
                 gui.setErrorLabel(booking.Book(UserID, id));
-
+                
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
