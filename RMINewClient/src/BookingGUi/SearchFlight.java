@@ -65,13 +65,13 @@ public class SearchFlight extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Departure", "Arrival", "Seat Type", "Date", "Time"
+                "Flight Number", "Departure", "Arrival", "Seat Type", "Date", "Time"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -80,10 +80,10 @@ public class SearchFlight extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Guest ID:");
+        jLabel3.setText("Flight Number");
         jLabel3.setOpaque(true);
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 80, 30));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, 170, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 130, 30));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 170, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\note book\\Desktop\\Grp12\\RMINewClient\\build\\classes\\images\\MW-HE536_airpla_20190225131547_ZH.jpg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
