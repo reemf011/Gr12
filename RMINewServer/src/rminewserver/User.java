@@ -17,12 +17,21 @@ public class User extends UnicastRemoteObject implements LogInInterface{
       String pass;
       String Email;
       UserMapper sm;
+
+    public User() {
+    }
       
       
     public User(Database db) throws RemoteException {
         sm = new UserMapper(db);
     }
 
+    public User(int UserID, String pass) {
+        this.UserID = UserID;
+        this.pass = pass;
+    }
+
+    
     public User(int UserID,String UserName,String pass,String Email) {
         this.UserID = UserID;
         this.UserName = UserName;

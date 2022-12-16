@@ -5,6 +5,15 @@
  */
 package rminewserver;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DeS
@@ -17,6 +26,16 @@ public class Villa {
     String end_date;
     double V_price;
     String Location;
+
+    public Villa(int Villa_Id, String V_Name, String Owner, String start_date, String end_date, double V_price, String Location) {
+        this.Villa_Id = Villa_Id;
+        this.V_Name = V_Name;
+        this.Owner = Owner;
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.V_price = V_price;
+        this.Location = Location;
+    }
 
     public String getLocation() {
         return Location;
@@ -46,5 +65,7 @@ public class Villa {
     public String getEnd_date() {
         return end_date;
     }
-    
+    public void Book(){
+        
+    }
 }

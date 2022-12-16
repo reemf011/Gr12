@@ -19,20 +19,14 @@ import java.util.ArrayList;
      
       Admin instance;
 
-  
-      
-    public Admin( Admin instance, String userID, String Password) {
-        super(userID, Password);
+    public Admin(Admin instance, int UserID, String pass) {
+        super(UserID, pass);
         this.instance = instance;
     }
 
-    Admin() {}
-
-   
-
-
-
-
+    public Admin() {
+    }
+    
 
 // Observers functions - Reem 197957
     public void reportOffers(String SpecialOffers) {
