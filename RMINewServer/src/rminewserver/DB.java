@@ -28,6 +28,8 @@ public class DB {
    MongoCollection<Document> collection2;
    MongoCollection<Document> collection3;
    MongoCollection<Document> collection4;
+    MongoCollection<Document> collection5;
+     MongoCollection<Document> collection6;
   
    public static Gson gson = new Gson();
     
@@ -46,6 +48,8 @@ public class DB {
         collection2 = database.getCollection("Car");
         collection3 = database.getCollection("Hotel");
         collection4 = database.getCollection("CustomerService");
+        collection5=database.getCollection("Villa");
+        collection6=database.getCollection("Apartment");
         
       }
    
@@ -144,8 +148,114 @@ public class DB {
         public void deleteCar(int BookID) {
         collection2.deleteOne(Filters.eq("car no.", BookID));
         System.out.println("Car is deleted");
+    }   
+        //Villa's DB
+           public void insertVilla(Villa v) 
+    {
+        collection5.insertOne(Document.parse(gson.toJson(v)));
+        System.out.println("Villa is inserted is inserted.");
+    }
+        // update car in the car collection
+        public Villa getVillaStdate(String stdate) {
+        Document doc = collection5.find(Filters.eq("Villa's start date", stdate)).first();
+        Villa result = gson.fromJson(doc.toJson(), Villa.class);
+        return result;
+    }
+        public Villa getVillaEndate(String endate) {
+        Document doc = collection5.find(Filters.eq("Villa's start date", endate)).first();
+        Villa result = gson.fromJson(doc.toJson(), Villa.class);
+        return result;
+    }
+        public Villa getVillaLocation(String loc) {
+        Document doc = collection5.find(Filters.eq("Villa's start date", loc)).first();
+        Villa result = gson.fromJson(doc.toJson(), Villa.class);
+        return result;
+    }
+        
+        
+        public void updatevilla(Villa v) {
+        Document doc = Document.parse(gson.toJson(v));
+        collection5.replaceOne(Filters.eq("Villa Location", v.getLocation()), doc);
+         collection5.replaceOne(Filters.eq("Villa start date", v.getStart_date()), doc);
+          collection5.replaceOne(Filters.eq("Villa enddate", v.getEnd_date()), doc);
+    }
+        
+        
+        public void updateVillaLocation( int V_id,String newLocation) {
+       
+        collection5.updateOne(Filters.eq("Villa booking ID",V_id), Updates.set("Location",newLocation));
+    }
+        
+         public void updateVillastdate( int V_id,String n_stdate) {
+       
+        collection5.updateOne(Filters.eq("Villa booking ID",V_id), Updates.set("Start date",n_stdate));
+    }
+           public void updateVillaendate( int V_id,String n_endate) {
+       
+        collection5.updateOne(Filters.eq("VIlla booking ID",V_id), Updates.set("Enddate",n_endate));
+    }
+       
+        
+        
+    
+        // delete car from car collection in the database
+        public void DeleteVilla(int V_id) {
+        collection5.deleteOne(Filters.eq("car no.", V_id));
+        System.out.println("Villa is deleted");
     }        
-              
+//        Appartment DB
+        
+        public void insertApartment(Apartment a) 
+    {
+        collection6.insertOne(Document.parse(gson.toJson(a)));
+        System.out.println("Apartment is inserted.");
+    }
+        // update car in the car collection
+        public Apartment getAStdate(String stdate) {
+        Document doc = collection6.find(Filters.eq("Apartment's start date", stdate)).first();
+        Apartment result = gson.fromJson(doc.toJson(), Apartment.class);
+        return result;
+    }
+        public Apartment getA_Endate(String endate) {
+        Document doc = collection6.find(Filters.eq("Apartment's end date", endate)).first();
+        Apartment result = gson.fromJson(doc.toJson(), Apartment.class);
+        return result;
+    }
+        public Apartment getA_Location(String loc) {
+        Document doc = collection6.find(Filters.eq("Villa's start date", loc)).first();
+       Apartment result = gson.fromJson(doc.toJson(), Apartment.class);
+        return result;
+    }
+        
+        
+        public void updateApartment(Apartment a) {
+        Document doc = Document.parse(gson.toJson(a));
+        collection6.replaceOne(Filters.eq("Apartment Location", a.getLocation()), doc);
+         collection6.replaceOne(Filters.eq("Apartment start date", a.getStart_date()), doc);
+          collection6.replaceOne(Filters.eq("Apartment enddate", a.getEnd_date()), doc);
+    }
+        
+        
+        public void updateApartmentLocation( int A_id,String newLocation) {
+       
+        collection6.updateOne(Filters.eq("Villa booking ID",A_id), Updates.set("Location",newLocation));
+    }
+        
+         public void updateApartmentstdate( int A_id,String n_stdate) {
+       
+        collection6.updateOne(Filters.eq("Villa booking ID",A_id), Updates.set("Start date",n_stdate));
+    }
+           public void updateapartmentendate( int A_id,String n_endate) {
+       
+        collection6.updateOne(Filters.eq("VIlla booking ID",A_id), Updates.set("Enddate",n_endate));
+    }
+       
+         public void DeleteApartment(int A_id) {
+        collection5.deleteOne(Filters.eq("car no.", A_id));
+        System.out.println("Apartment is deleted");
+    }  
+        
+        
          
          public void close() 
     {

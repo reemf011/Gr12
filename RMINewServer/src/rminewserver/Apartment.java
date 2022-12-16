@@ -13,7 +13,10 @@ public class Apartment {
     int Apartmentid;
     String Apartmentname;
     String Owner;
-
+    String start_date;
+    String end_date;
+    double A_price;
+    String Location;
     public String getApartmentname() {
         return Apartmentname;
     }
