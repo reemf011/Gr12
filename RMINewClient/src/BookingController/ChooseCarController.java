@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
  import BookingGUi.ChooseCarTable;
- import rmi.CustomerBookingInterface;
+ import rmi.CustomerBookingROI;
 /**
  *
  * @author user
@@ -42,8 +42,8 @@ public class ChooseCarController {
     }
 
     public void FillTable() throws RemoteException, NotBoundException{
-        CustomerBookingInterface book = (CustomerBookingInterface) r.lookup("Car");
-        ArrayList<String> x = book.ViewBooking();
+        CustomerBookingROI book = (CustomerBookingROI) r.lookup("book");
+       ArrayList<String> x = book.ViewBooking();
         DefaultTableModel tblModel = (DefaultTableModel) gui.getjTable1().getModel();
         for (int r=0;r<x.size();r++) {
             Document d = Document.parse(x.get(r));
@@ -59,8 +59,8 @@ public class ChooseCarController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
-                CustomerBookingInterface course = (CustomerBookingInterface) r.lookup("car");
-                gui.setErrorLabel(course.CarBooking(car_id, id));
+                CustomerBookingROI book = (CustomerBookingROI) r.lookup("car");
+                gui.setErrorLabel(book.AddBooking(car_id, id));
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());

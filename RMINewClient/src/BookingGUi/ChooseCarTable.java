@@ -89,12 +89,12 @@ public class ChooseCarTable extends javax.swing.JFrame {
         this.jLabel1 = jLabel1;
     }
 
-    public JLabel getjLabel2() {
-        return jLabel2;
+    public JLabel getjLabel4() {
+        return jLabel4;
     }
 
-    public void setjLabel2(JLabel jLabel2) {
-        this.jLabel2 = jLabel2;
+    public void setjLabel4(JLabel jLabel2) {
+        this.jLabel4 = jLabel2;
     }
 
     public JPanel getjPanel1() {
@@ -120,7 +120,13 @@ public class ChooseCarTable extends javax.swing.JFrame {
     public void setjTable1(JTable jTable1) {
         this.jTable1 = jTable1;
     }
+public JLabel getErrorLabel() {
+        return ErrorLabel;
+    }
 
+    public void setErrorLabel(String ErrorLabel) {
+        this.ErrorLabel.setText(ErrorLabel);
+    }
     
 
     /**
@@ -143,7 +149,8 @@ public class ChooseCarTable extends javax.swing.JFrame {
         bookCarbtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        ErrorLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -220,8 +227,11 @@ public class ChooseCarTable extends javax.swing.JFrame {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 80, 30));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 170, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rminewclient/car.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 610));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BookingGUi/car.jpg"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 610));
+
+        ErrorLabel.setText("jLabel2");
+        jPanel1.add(ErrorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 56, 160, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -297,14 +307,15 @@ public class ChooseCarTable extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ErrorLabel;
     private javax.swing.JButton Kiabtn;
     private javax.swing.JButton Mercedesbtn;
     private javax.swing.JButton Opelbtn;
     private javax.swing.JButton Skodabtn;
     private javax.swing.JButton bookCarbtn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

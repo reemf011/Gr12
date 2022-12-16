@@ -83,8 +83,8 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
-               BookingInterface booking = (BookingInterface) r.lookup("Course");
-                gui.setErrorLabel(booking.BookRoom(UserID, id));
+               BookingInterface booking = (BookingInterface) r.lookup("Car");
+                gui.setErrorLabel(booking.SetBookingData(UserID, id));
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
