@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rminewclient;
+package CustomerGUi;
 
-import CustomerGUi.Login;
 import CustomerController.LoginController;
+import CustomerGUi.Login;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import rmi.DatabaseInterface;
+import java.rmi.*;
 
 /**
  *
@@ -22,23 +23,15 @@ public class RMINewClient {
 
 
     public static void main(String[] args) throws RemoteException {
-              try {
-            Login gui1 = new Login();
-            Registry registry = LocateRegistry.getRegistry(1099);
-            DatabaseInterface db = (DatabaseInterface) registry.lookup("Database");
-            db.OpenDBConnection();
-            LoginController guiController = new LoginController(gui1, registry);
-            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-                try {
-                    db.CloseDBConnection();
-                } catch (RemoteException ex) {
-                    Logger.getLogger(RMINewClient.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }));
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+           try {
+            Registry reg = LocateRegistry.createRegistry(1099);
+            LoginController lp = new LoginController();
+            reg.rebind("login", lp);
+            System.out.println("Server is up...");
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }        
+    }
     }
            
        
@@ -47,6 +40,6 @@ public class RMINewClient {
         
         
         
-    }
+    
     
 

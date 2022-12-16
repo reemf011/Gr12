@@ -16,7 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import rmi.RoomManager;
-import CustomerGUi.MainMenu;
+import CustomerGUi.CustomerMenu;
 
 public class BookRoom extends javax.swing.JFrame {
 
@@ -117,7 +117,7 @@ public class BookRoom extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonBookActionPerformed
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
-        new MainMenu().setVisible(true);
+        new CustomerMenu().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButtonBackActionPerformed
 

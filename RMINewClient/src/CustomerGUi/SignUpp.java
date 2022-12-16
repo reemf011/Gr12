@@ -234,16 +234,11 @@ public class SignUpp extends javax.swing.JFrame {
     public JButton getBackBtn() {
         return BackBtn;
     }
-
-
-
-    public JLabel getWelcome() {
-        return Welcome;
-    }
-
-    public JButton getjButton1() {
+ public JButton getjButton1() {
         return jButton1;
     }
+
+
 
     public JLabel getjLabel1() {
         return jLabel1;

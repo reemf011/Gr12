@@ -40,7 +40,7 @@ public class CustomerMenuController {
     public CustomerMenuController(int UserID,CustomerMenu gui, Registry r) throws RemoteException, NotBoundException {
         this.UserID=UserID;
         this.gui = gui;
-        gui.setjLabel5(UserID);
+       // gui.setjLabel5(UserID);
         CustomerInterface customer = (CustomerInterface) r.lookup("Customer");
         gui.setSize(750, 640);
         gui.setLocationRelativeTo(null);
@@ -81,7 +81,7 @@ public class CustomerMenuController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 gui.setVisible(false);
-                EditProfileController guiController3 = new EditProfileController(UserID,new EditProfileCustomer(), r);
+               // EditProfileController guiController3 = new EditProfileController(UserID,new EditProfileCustomer(), r);
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -143,7 +143,7 @@ public class CustomerMenuController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 gui.setVisible(false);
-                EnrollToCourseController guiController3 = new EnrollToCourseController(StudentID,new EnrollToCourseStudent(), r);
+               // EnrollToCourseController guiController3 = new EnrollToCourseController(StudentID,new EnrollToCourseStudent(), r);
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());

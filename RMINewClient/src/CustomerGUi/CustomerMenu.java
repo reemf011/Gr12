@@ -33,10 +33,10 @@ public class CustomerMenu extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         LogoutBtn = new javax.swing.JButton();
         EditProfileBtn = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -51,22 +51,22 @@ public class CustomerMenu extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel2.setText("Welcome to E7gzly System");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton1.setText("Book Hotel");
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton3.setText("Book Hotel");
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton2.setText("Book Car");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton1.setText("Book Car");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton3.setText("Book  Property");
-
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton4.setText("Book Flight");
+        jButton4.setText("Book  Property");
+
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton2.setText("Book Flight");
 
         LogoutBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         LogoutBtn.setText("Logout");
@@ -80,7 +80,7 @@ public class CustomerMenu extends javax.swing.JFrame {
         EditProfileBtn.setText("Edit Profile");
 
         jButton5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton5.setText("View Bookiings");
+        jButton5.setText("View Bookings");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -103,10 +103,10 @@ public class CustomerMenu extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(95, 95, 95)
@@ -138,13 +138,13 @@ public class CustomerMenu extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addComponent(jLabel2)
                         .addGap(38, 38, 38)
-                        .addComponent(jButton2)
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton5))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -189,9 +189,9 @@ public class CustomerMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LogoutBtnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public JButton getEditProfileBtn() {
         return EditProfileBtn;
@@ -202,19 +202,19 @@ public class CustomerMenu extends javax.swing.JFrame {
     }
 
     public JButton getjButton1() {
-        return jButton1;
-    }
-
-    public JButton getjButton2() {
-        return jButton2;
-    }
-
-    public JButton getjButton3() {
         return jButton3;
     }
 
-    public JButton getjButton4() {
+    public JButton getjButton2() {
+        return jButton1;
+    }
+
+    public JButton getjButton3() {
         return jButton4;
+    }
+
+    public JButton getjButton4() {
+        return jButton2;
     }
 
     public JButton getjButton5() {
@@ -250,19 +250,19 @@ public class CustomerMenu extends javax.swing.JFrame {
     }
 
     public void setjButton1(JButton jButton1) {
-        this.jButton1 = jButton1;
+        this.jButton3 = jButton1;
     }
 
     public void setjButton2(JButton jButton2) {
-        this.jButton2 = jButton2;
+        this.jButton1 = jButton2;
     }
 
     public void setjButton3(JButton jButton3) {
-        this.jButton3 = jButton3;
+        this.jButton4 = jButton3;
     }
 
     public void setjButton4(JButton jButton4) {
-        this.jButton4 = jButton4;
+        this.jButton2 = jButton4;
     }
 
     public void setjButton5(JButton jButton5) {
