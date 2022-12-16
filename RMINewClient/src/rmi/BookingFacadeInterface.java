@@ -7,7 +7,7 @@ package rmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import rminewclient.BookingDTO;
+import BookingController.BookingDTO;
 
 public interface BookingFacadeInterface extends Remote {
     

@@ -4,7 +4,7 @@
  */
 package BookingGUi;
 
-import rminewclient.payment;
+import PaymentGUi.payment;
 
 /**
  *

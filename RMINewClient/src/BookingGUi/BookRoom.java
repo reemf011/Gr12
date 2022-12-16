@@ -16,7 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import rmi.RoomManager;
-import rminewclient.MainMenu;
+import CustomerGUi.MainMenu;
 
 public class BookRoom extends javax.swing.JFrame {
 

@@ -11,8 +11,8 @@ import java.awt.event.ActionListener;
 import java.rmi.registry.Registry;
 import rmi.LogInInterface;
 import rmi.CustomerInterface;
-import rminewclient.Login;
-import rminewclient.SignUpp;
+import CustomerGUi.Login;
+import CustomerGUi.SignUpp;
 
 
 /**

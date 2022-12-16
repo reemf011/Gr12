@@ -9,8 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.registry.Registry;
 import rmi.LogInInterface;
-import rminewclient.Login;
-import rminewclient.SignUpp;
+import CustomerGUi.Login;
+import CustomerGUi.SignUpp;
 import javax.swing.JFrame;
 
 /**

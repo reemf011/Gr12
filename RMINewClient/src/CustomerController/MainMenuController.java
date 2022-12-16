@@ -15,8 +15,8 @@ import rmi.CustomerInterface;
 import rmi.EditProfileCustomer;
 import BookingGUi.BookRoom;
 //import StudentGUI.EvaluationStudent;
-import rminewclient.Login;
-import rminewclient.CustomerMenu;
+import CustomerGUi.Login;
+import CustomerGUi.CustomerMenu;
 import rminewclient.viewBookings;
 
 
