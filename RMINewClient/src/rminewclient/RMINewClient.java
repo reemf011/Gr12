@@ -5,14 +5,13 @@
  */
 package rminewclient;
 
-import rmi.LogInFacade;
-import controllers.MainWindowController;
-import java.rmi.NotBoundException;
+import controllers.LoginController;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.Scanner;
-import rmi.BookingFacadeInterface;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import rmi.DatabaseInterface;
 
 /**
  *
@@ -22,54 +21,26 @@ public class RMINewClient {
 
 
     public static void main(String[] args) throws RemoteException {
-//
-//        // We create an object from the GUI window
-//        MainWindow gui = new MainWindow();
-//        gui.setLocationRelativeTo(null); // This makes the window appears centered
-//        gui.setVisible(true); // This shows the gui
-//        
-//        // We connect to the RMI Registry
-//        Registry r = LocateRegistry.getRegistry(1099);
-//        
-//        // we create a new object from the controller and we pass it the
-//        // gui object along with the registry object
-//        MainWindowController gui_controller = new MainWindowController(gui, r);
-            Registry reg = LocateRegistry.getRegistry("localhost",1099);  
-            try{
-           
-            LogInFacade server = (LogInFacade) reg.lookup("rmi://localhost/service");
-            Scanner scan = new Scanner(System.in); 
-            
-            System.out.println("Enter username : ");
-            String username = scan.nextLine();
-            System.out.println("Enter password : ");
-            String password = scan.nextLine();
-            
-            String response = server.login(username, password);
-            
-            System.out.println("Response from server : " + response);
-        }catch(RemoteException | NotBoundException ex){
-            System.out.println(ex.getMessage());
-        }
-        
-          try {
-            // Search for the stub "calc"
-            BookingFacadeInterface f = (BookingFacadeInterface) reg.lookup("fac");
+              try {
+            Login gui1 = new Login();
+            Registry registry = LocateRegistry.getRegistry(1099);
+            DatabaseInterface db = (DatabaseInterface) registry.lookup("Database");
+            db.OpenDBConnection();
+            LoginController guiController = new LoginController(gui1, registry);
+            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                try {
+                    db.CloseDBConnection();
+                } catch (RemoteException ex) {
+                    Logger.getLogger(RMINewClient.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }));
 
-             //Invoke the remote methods on the remote object
-//           f.SetBookingData(12, "12/3/2022 ", " Reserved");
-//           
-//           String BookingInfo =f.getBookingData();
-//           System.out.println("Booking info  : "+BookingInfo);
-            
-           f.SetBookingData(13 , "0/11/2022 ", "Not Confirmred yet ");
-           BookingDTO c= f.getBooking();
-            System.out.println("Booking ID "+c.getBooking_ID());
-            
-           
-        } catch (Exception ex) {
-            System.out.println("Exception occured");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+    }
+           
+       
         
         
         
@@ -77,4 +48,4 @@ public class RMINewClient {
         
     }
     
-}
+

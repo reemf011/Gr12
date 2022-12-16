@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package rmi;
 
 import java.rmi.Remote;
@@ -11,10 +10,12 @@ import java.rmi.RemoteException;
 
 /**
  *
- * @author Ghadeer
+ * @author reemf011
  */
-public interface LogInFacade extends Remote{
-    public String login(String username, String password) throws RemoteException;
+public interface DatabseInterface {
+
+    public void OpenDBConnection() throws RemoteException;
+    public void CloseDBConnection() throws RemoteException;
 }
 
 

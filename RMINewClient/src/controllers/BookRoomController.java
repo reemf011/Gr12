@@ -5,7 +5,14 @@
  */
 package controllers;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.rmi.registry.Registry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import rmi.GradeInterface;
 import rminewclient.BookRoom;
 
 /**
@@ -17,4 +24,14 @@ public class BookRoomController {
     // We have reference to both the GUI and the rmi registry
     BookRoom gui;
     Registry r;
+
+    //create a constructor
+    public BookRoomController(BookRoom gui, Registry r) {
+        this.gui = gui;
+        this.r = r;
+    }
+    
+    
+    
+    
 }

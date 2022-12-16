@@ -17,7 +17,7 @@ import javax.swing.table.*;
 import javax.swing.*; 
 import java.awt.*; 
 import java.awt.event.*;
-import rminewclient.Options;
+import rminewclient.MainWindow;
 
 
 
@@ -64,7 +64,7 @@ public class DisplayRoom extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Options n = new Options();
+       MainWindow n = new MainWindow();
        n.setVisible(true);
        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed

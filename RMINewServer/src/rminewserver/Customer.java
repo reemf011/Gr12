@@ -3,39 +3,41 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package rminewserver;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.UUID;
+import rmi.CustomerInterface;
 
 /**
  *
  * @author DeS
  */
- class Customer extends User implements Observer   {
-    String name;
-    String Email;
+
+ class Customer extends UnicastRemoteObject implements Observer, CustomerInterface {
+
+    /*String name;
     String Gender;
     String DOB;
     String creditCardinfo;
     ArrayList<BookingFacade> oldReportedBooking;
     ArrayList<BookingFacade> upcomingReportedBookings;
 
-    
-
-
-    public Customer(String name, String Email, String Gender, String DOB, String creditCardinfo, ArrayList<BookingFacade> oldReportedBooking, ArrayList<BookingFacade> upcomingReportedBookings, String userID, String Password) {
-        super(userID, Password);
+    public Customer(String name, String Gender, String DOB, String creditCardinfo, ArrayList<BookingFacade> oldReportedBooking, ArrayList<BookingFacade> upcomingReportedBookings, String UserID, String UserName, String pass, String Email) {
+        super(UserID, UserName, pass, Email);
         this.name = name;
-        this.Email = Email;
         this.Gender = Gender;
         this.DOB = DOB;
         this.creditCardinfo = creditCardinfo;
         this.oldReportedBooking = oldReportedBooking;
         this.upcomingReportedBookings = upcomingReportedBookings;
-        
     }
 
+
+   
     public String getName() {
         return name;
     }
@@ -91,15 +93,90 @@ import java.util.UUID;
 
     public void setUpcomingReportedBookings(ArrayList<BookingFacade> upcomingReportedBookings) {
         this.upcomingReportedBookings = upcomingReportedBookings;
+    }*/
+
+   //Observer Design Pattren: update functoin to update the users with the special offers Reem 197957*/    
+  
+     int UserID;
+     String UserName;
+     String pass;
+     String Email;
+             
+    private CustomerMapper ct;
+
+    public Customer(int UserID, String UserName, String pass, String Email) {
+        this.UserID = UserID;
+        this.UserName = UserName;
+        this.pass = pass;
+        this.Email = Email;
     }
 
-   
-/* Observer Design Pattren: update functoin to update the users with the special offers Reem 197957*/    
+
+    public Customer(Database db)  throws RemoteException{
+        ct = new CustomerMapper(db);
+    }
+    public int getUserID() {
+        return UserID;
+    }
+
+    public void setUserID(int UserID) {
+        this.UserID = UserID;
+    }
+
+    public String getUserName() {
+        return UserName;
+    }
+
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+ 
+
     @Override
     public void update(String SpecialOffers) {
-        System.out.println(name+" "+"recieved the exculsive Offers");
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(UserName+" "+"recieved the exculsive Offers");
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void AddCustomer(int id, String name, String email) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void RemoveCustomer(int id) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void UpdateCustomer(int id, String name, String email) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<String> ViewBookings(int sID) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+ }
+    
     
   
     
@@ -107,7 +184,7 @@ import java.util.UUID;
   
   
 
-}
+
     
     
     

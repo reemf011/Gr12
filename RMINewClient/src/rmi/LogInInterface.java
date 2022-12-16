@@ -13,7 +13,9 @@ import java.rmi.RemoteException;
  *
  * @author Ghadeer
  */
-public interface LogInFacade extends Remote{
+public interface LogInInterface extends Remote{
+    public boolean AddnewAccount(String username, String password, String Email)  throws RemoteException;
+    
     public String login(String username, String password) throws RemoteException;
 }
 

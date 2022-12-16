@@ -6,41 +6,81 @@
 package rminewserver;
 
 import java.util.ArrayList;
+import java.rmi.RemoteException;
+import java.rmi.server.RemoteRef;
+import java.rmi.server.UnicastRemoteObject;
+import rmi.LogInInterface;
+                     
+public class User extends UnicastRemoteObject implements LogInInterface{
+      int UserID;
+      String UserName;
+      String pass;
+      String Email;
+      UserMapper sm;
+      
+      
+    public User(Database db) throws RemoteException {
+        sm = new UserMapper(db);
+    }
 
-/**
- *
- * @author DeS
- */
-public abstract class User {
-    String userID;
-    String Password;
+    public User(int UserID,String UserName,String pass,String Email) {
+        this.UserID = UserID;
+        this.UserName = UserName;
+        this.pass = pass;
+        this.Email =Email;
+    }
 
-    public User() {
+    public int getUserID() {
+        return UserID;
+    }
+
+    public void setUserID(int UserID) {
+        this.UserID = UserID;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public String getUserName() {
+        return UserName;
+    }
+
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
     }
     
+ 
 
-    public User(String userID, String Password) {
-        this.userID = userID;
-        this.Password = Password;
+    @Override
+    public boolean AddnewAccount(String username, String password, String Email) throws RemoteException {
+            return sm.SignUp(username, password,Email);
+
+        
     }
 
-    public String getUserID() {
-        return userID;
+    @Override
+    public boolean EditAccount(int id, String Email, String Username, String Newusername, String password, String newPassword) throws RemoteException{
+        return sm.editAccount(id, Email, Username, Newusername, password, newPassword);
     }
 
-    public String getPassword() {
-        return Password;
+    @Override
+    public int login(String username, String password) throws RemoteException {
+        return sm.loginVerify(username, password);
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
-    }
 
-    public void setPassword(String Password) {
-        this.Password = Password;
-    }
    
-   
-    public void Login(){}
-    public void SignUp(){}
 }

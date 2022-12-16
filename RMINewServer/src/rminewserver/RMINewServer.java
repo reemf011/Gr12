@@ -11,7 +11,11 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import rmi.GradeInterface;
+import rmi.BookHoteInterface;
+import rmi.DatabseInterface;
+import rmi.LogInInterface;
+import rmi.CustomerInterface;
+
 
 /**
  *
@@ -27,10 +31,60 @@ public class RMINewServer {
     static Hotel h2;
 
     public static void main(String[] args) throws RemoteException, AlreadyBoundException {
+     Registry r = LocateRegistry.createRegistry(1099);
+        DatabaseInterface dbb = new Database(1);
+        r.bind("Database", dbb);
+        Database db;
+        boolean check = false;
+        while (true) {
+            System.out.printf("");
+            System.out.printf("");
+            if (Database.CheckDB() && !check) {
+                db = Database.getDb();
+                LogInInterface g = new User(db);
+                BookHotelInterface course = new Hotel(db);
+                CustomerInterface customer = new Customer(db);
+            
+                
+                
+                r.bind("User", g);
+                r.bind("Course", course);
+                r.bind("Customer", customer);
+
+                check = true;
+                System.out.println("The server is ready");
+            } else if (check == true && !Database.CheckDB()) {
+                r.unbind("User");
+                r.unbind("Course");
+                r.unbind("Customer");
+
+                check = false;
+            }
+        }
+
+    }
         
-      //Observer Design Pattern Application - Reem 197957   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+     /* //Observer Design Pattern Application - Reem 197957   
      Admin a = new Admin();
-     Customer cust1 = new Customer("Omar","OmarSa_20@gmail.com", "male","20/1/1988","5452 2121 2121 5465",null,null,"Omar7863", "23212245");
+     Customer cust1 = new Customer(12,"Omar", "1234_Omar","Omar7863@ gmail.com");
      
      a.registerObserver(cust1);
      
@@ -69,7 +123,7 @@ public class RMINewServer {
         mongoLogger.setLevel(Level.SEVERE);
         
         //Calling the class for the database 
-        DB db = new DB();
+        Database db = new Database();
         
         // Here we create our remote object
         //GradeInterface g = new Grade();
@@ -84,8 +138,8 @@ public class RMINewServer {
         System.out.println("The server is ready");
         
         
-      s1 = new Customer ("Meriam", "Meriam12@yahoo.com", "Female", "12/11/2002","2121 2154 6565", null, null, "Mariam121", "121dB454");
-     s2 = new Customer ("Abdelrahman", "abdo13@yahoo.com", "Male", "12/3/1998","5665 5455 5523 4545", null, null, "Hgrs121", "515215BB");
+      s1 = new Customer ( 13, "Meriam", "Meria13", "Meriam12@yahoo.com");
+     s2 = new Customer (14,"Abdelrahman", "Abdelrahamn215", "abdo13@yahoo.com");
         
         c1 = new Car (1, 1 ,"Cairo","Private Car", 15000);
         c2 = new Car (2, 3 ,"Tagmoa","Taxi", 100);
@@ -129,5 +183,5 @@ public class RMINewServer {
 
          
     
-    
-}
+}/*    
+

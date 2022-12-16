@@ -21,12 +21,12 @@ import rminewclient.BookRoom;
  * and open the template in the editor.
  */
 
-public class Options extends javax.swing.JFrame {
+public class MainWindow extends javax.swing.JFrame {
 
     /**
      * Creates new form Options
      */
-    public Options() {
+    public MainWindow() {
         initComponents();
     }
 
@@ -39,11 +39,13 @@ public class Options extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonAvailable = new javax.swing.JButton();
         jButtonBook = new javax.swing.JButton();
-        jButtonGuests = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButtonAvailable1 = new javax.swing.JButton();
+        jButtonBook1 = new javax.swing.JButton();
+        jButtonBook2 = new javax.swing.JButton();
         jLabelBackground = new javax.swing.JLabel();
+        jButtonAvailable2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 550, 375));
@@ -51,47 +53,67 @@ public class Options extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(550, 375));
         getContentPane().setLayout(null);
 
-        jButtonAvailable.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jButtonAvailable.setText("Available Rooms");
-        jButtonAvailable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAvailableActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButtonAvailable);
-        jButtonAvailable.setBounds(170, 150, 220, 30);
-
         jButtonBook.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jButtonBook.setText("Book Room");
+        jButtonBook.setText("Book Property");
         jButtonBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBookActionPerformed(evt);
             }
         });
         getContentPane().add(jButtonBook);
-        jButtonBook.setBounds(170, 220, 220, 30);
-
-        jButtonGuests.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jButtonGuests.setText("Guests");
-        jButtonGuests.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGuestsActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButtonGuests);
-        jButtonGuests.setBounds(170, 290, 220, 30);
+        jButtonBook.setBounds(160, 220, 220, 30);
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
-        jLabel1.setText("WELCOME !");
+        jLabel1.setText("Choose The Service");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 40, 260, 60);
+        jLabel1.setBounds(40, 40, 480, 60);
+
+        jButtonAvailable1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        jButtonAvailable1.setText("Book Car");
+        jButtonAvailable1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAvailable1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonAvailable1);
+        jButtonAvailable1.setBounds(160, 140, 220, 30);
+
+        jButtonBook1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        jButtonBook1.setText("Book Flight");
+        jButtonBook1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBook1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonBook1);
+        jButtonBook1.setBounds(160, 260, 220, 30);
+
+        jButtonBook2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        jButtonBook2.setText("Book Hotel");
+        jButtonBook2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBook2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonBook2);
+        jButtonBook2.setBounds(160, 180, 220, 30);
 
         jLabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/optionsbackground.jpg"))); // NOI18N
         jLabelBackground.setMaximumSize(new java.awt.Dimension(550, 375));
         jLabelBackground.setMinimumSize(new java.awt.Dimension(550, 375));
         jLabelBackground.setPreferredSize(new java.awt.Dimension(550, 375));
         getContentPane().add(jLabelBackground);
-        jLabelBackground.setBounds(0, -10, 570, 390);
+        jLabelBackground.setBounds(0, 0, 570, 390);
+
+        jButtonAvailable2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        jButtonAvailable2.setText("Book Car");
+        jButtonAvailable2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAvailable2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonAvailable2);
+        jButtonAvailable2.setBounds(10, 140, 220, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,25 +123,27 @@ public class Options extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButtonBookActionPerformed
 
+    private void jButtonAvailable1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAvailable1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAvailable1ActionPerformed
+
+    private void jButtonAvailable2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAvailable2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAvailable2ActionPerformed
+
+    private void jButtonBook1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBook1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonBook1ActionPerformed
+
+    private void jButtonBook2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBook2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonBook2ActionPerformed
+
     private void jButtonAvailableActionPerformed(java.awt.event.ActionEvent evt) {                                            
         new BookRoom().setVisible(true);
         this.setVisible(false);
     }                                           
 
-
-    private void jButtonGuestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuestsActionPerformed
-       Customer n;
-        try {
-            n = new Customer();
-            n.setVisible(true);
-        } catch (RemoteException ex) {
-            Logger.getLogger(Options.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NotBoundException ex) {
-            Logger.getLogger(Options.class.getName()).log(Level.SEVERE, null, ex);
-        }
-       
-        this.setVisible(false);
-    }//GEN-LAST:event_jButtonGuestsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,28 +162,31 @@ public class Options extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Options().setVisible(true);
+                new MainWindow().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAvailable;
+    private javax.swing.JButton jButtonAvailable1;
+    private javax.swing.JButton jButtonAvailable2;
     private javax.swing.JButton jButtonBook;
-    private javax.swing.JButton jButtonGuests;
+    private javax.swing.JButton jButtonBook1;
+    private javax.swing.JButton jButtonBook2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelBackground;
     // End of variables declaration//GEN-END:variables
