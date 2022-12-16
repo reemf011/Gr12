@@ -48,7 +48,7 @@ public class SearchFlightController {
         DefaultTableModel tblModel = (DefaultTableModel) gui.getjTable1().getModel();
         for (int r=0;r<x.size();r++) {
             Document d = Document.parse(x.get(r));
-            String data[] = {d.get("plane_id").toString(),d.get("DepartureDate").toString(),d.get("ArrivalDate").toString(), d.get(" SeatType").toString(), d.get("Date"), d.get("Time")};
+            String data[] = {d.get("Flight Number").toString(),d.get("DepartureDate").toString(),d.get("ArrivalDate").toString(), d.get(" SeatType").toString(), d.get("Date"), d.get("Time")};
             tblModel.insertRow(r,data);
         }
 
