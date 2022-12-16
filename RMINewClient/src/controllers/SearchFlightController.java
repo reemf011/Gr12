@@ -28,7 +28,7 @@ public class SearchFlightController {
      SearchFlight gui;
     Registry r;
     
-        public controllers(SearchFlight gui, Registry r) throws RemoteException, NotBoundException {
+        //public controllers(SearchFlight gui, Registry r) throws RemoteException, NotBoundException {
 
 }
 
