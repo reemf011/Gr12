@@ -9,6 +9,6 @@ package CustomerController;
  *
  * @author reemf011
  */
-public class ViewBookings {
+public class CustomerMenu {
     
 }

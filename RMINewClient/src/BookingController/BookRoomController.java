@@ -19,8 +19,8 @@ import rmi.CustomerBookingReadOnly;
 import BookingGUi.BookRoom;
 import CustomerGUi.MainMenu;
 import CustomerGUi.CustomerMenu;
-import CustomerController.MainMenuController;
-import CustomerController.MainMenuController;
+import CustomerController.CustomerMenuController;
+import CustomerController.CustomerMenuController;
 import javax.swing.JFrame;
 
 import BookingGUi.BookRoom;
@@ -66,7 +66,7 @@ public class BookRoomController {
     }
 
     public void FillTable() throws RemoteException, NotBoundException{
-        CustomerBookingReadOnly hotel = (CustomerBookingReadOnly) r.lookup("CustomerHotelBooking");
+        CustomerBookingRIO hotel = (CustomerBookingRIO) r.lookup("CustomerHotelBooking");
         ArrayList<String> x = hotel.ViewAccepted();
         DefaultTableModel tblModel = (DefaultTableModel) gui.getjTable2().getModel();
         for (int r=0;r<x.size();r++) {
@@ -83,8 +83,8 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
-               BookingInterface booking = (BookingInterface) r.lookup("Course");
-                gui.setErrorLabel(booking.BookRoom(UserID, id));
+               CustomerBookingRIO booking = (CustomerBookingRIO) r.lookup("booking");
+                gui.setErrorLabel(booking.Book(UserID, id));
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -99,7 +99,7 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                     gui.setVisible(false);
-                   MainMenuController guiController = new MainMenuController(UserID, new CustomerMenu(), r);
+                   CustomerMenuController guiController = new CustomerMenuController(UserID, new CustomerMenu(), r);
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
