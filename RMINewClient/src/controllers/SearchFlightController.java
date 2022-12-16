@@ -16,6 +16,10 @@ import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import rmi.BookFlightInterface;
+import rmi.LogInInterface;
+import rminewclient.Login;
+import rminewclient.SignUpp;
 //import rmi.CourseFacadeInterface;
 //import rmi.CourseInterface;
 //import rmi.StaffInterface;
@@ -28,8 +32,36 @@ public class SearchFlightController {
      SearchFlight gui;
     Registry r;
     
-        //public controllers(SearchFlight gui, Registry r) throws RemoteException, NotBoundException {
+    public SearchFlightController(SearchFlight gui, Registry r) {
+        this.gui = gui;
+        gui.setSize(750, 640);
+        gui.setLocationRelativeTo(null);
+        gui.setVisible(true);
+        this.r = r;
+        gui.getjButton1().addActionListener(new SearchAction());
+    }
 
+    class SearchAction implements ActionListener {
+
+        private Object user;
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            try {
+                String Arrival = gui.getjComboBox1().getActionCommand();
+                String Departure = gui.getjComboBox2().getActionCommand();
+                String SeatType = gui.getjComboBox3().getActionCommand();
+                String Date = gui.getjTextField1().getText();
+                String Time = gui.getjTextField2().getText();
+                
+               
+
+                BookFlightInterface acc = (BookFlightInterface) r.lookup("Flight");
+
+
+            } catch (Exception e) {
+                gui.setErrorLabel(e.getMessage());
+            }
+        }
+    }
 }
-
-  
