@@ -14,7 +14,8 @@ import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
-
+ import rminewclient.ChooseCarTable;
+ import rmi.CustomerBookingInterface;
 /**
  *
  * @author user
@@ -23,45 +24,43 @@ public class ChooseCarController {
       //ChooseCarGui obj = new ChooseCarGui();
         //obj.show();
     
-    int StudentID;
-    ChooseCarGui gui;
+    int car_id;
+    ChooseCarTable gui;
     Registry r;
 
-    public EnrollToCourseController(int StudentID,EnrollToCourseStudent gui, Registry r) throws RemoteException, NotBoundException{
-        this.StudentID=StudentID;
+    public ChooseCarController(int car_id, ChooseCarTable gui, Registry r) throws RemoteException, NotBoundException{
+        this.car_id=car_id;
         this.gui = gui;
         this.r = r;
         gui.setSize(750, 640);
         gui.setLocationRelativeTo(null);
         gui.setVisible(true);
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
         FillTable();
         
-        gui.getEnrollBtn().addActionListener(new EnrollAction());
-        gui.getBackBtn().addActionListener(new BackAction());
+        gui.getBookCarbtn().addActionListener(new CarBooking());
     }
 
     public void FillTable() throws RemoteException, NotBoundException{
-        StudentCourseReadOnly course = (StudentCourseReadOnly) r.lookup("StudentCourse");
-        ArrayList<String> x = course.ViewAcceptedCourses();
+        CustomerBookingInterface book = (CustomerBookingInterface) r.lookup("Car");
+        ArrayList<String> x = book.ViewBooking();
         DefaultTableModel tblModel = (DefaultTableModel) gui.getjTable1().getModel();
         for (int r=0;r<x.size();r++) {
             Document d = Document.parse(x.get(r));
-            String data[] = {d.get("ID").toString(),d.get("Code").toString(),d.get("Title").toString(), d.get("Description").toString(), d.get("ProfessorID").toString(),d.get("NumHrs").toString(),d.get("Capacity").toString()};
+            String data[] = {d.get("Car_id").toString(),d.get("Price").toString(),d.get("Car_model").toString(), d.get(" Rental_Duration").toString(), d.get("Year_of_Production")};
             tblModel.insertRow(r,data);
         }
 
     }
 
-    class EnrollAction implements ActionListener {
+    class CarBooking implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
             try {
-                int id = parseInt(gui.getCourseIDField().getText());
-                CourseInterface course = (CourseInterface) r.lookup("Course");
-                gui.setErrorLabel(course.EnrollCourse(StudentID, id));
+                int id = parseInt(gui.getjTextField1().getText());
+                CustomerBookingInterface course = (CustomerBookingInterface) r.lookup("car");
+                gui.setErrorLabel(course.CarBooking(car_id, id));
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -70,21 +69,7 @@ public class ChooseCarController {
         }
     }
     
-    class BackAction implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent ae) {
-            try {
-                    gui.setVisible(false);
-                    StudentMainWindowController guiController = new StudentMainWindowController(StudentID, new StudentMenu(), r);
-
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-
-        }
-    }
-
+    
 }
     
     
