@@ -16,4 +16,6 @@ public interface PaymentStrategy
     public String ViewPayment(String type, int pID) throws RemoteException;
     public boolean AddPayment(int paymeID, int UserID, String date, double amount) throws RemoteException;
 
+    public void pay(String amount);
+
 }
