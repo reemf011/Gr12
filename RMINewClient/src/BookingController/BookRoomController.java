@@ -15,17 +15,8 @@ import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
 import rmi.BookingFacadeInterface;
-<<<<<<< HEAD
-import rmi.CustomerBookingROI;
-=======
-import rmi.CustomerBookingReadOnly;
->>>>>>> 0a3793c49f2cb4ac3d2a2f1dfe5b78ad20a0c3a4
-import BookingGUi.BookRoom;
-import CustomerGUi.CustomerMenu;
-import CustomerGUi.CustomerMenu;
-import CustomerController.CustomerMenuController;
+import CustomerController.MainMenuController;
 import javax.swing.JFrame;
-
 import BookingGUi.BookRoom;
 
 /**
@@ -69,8 +60,8 @@ public class BookRoomController {
     }
 
     public void FillTable() throws RemoteException, NotBoundException{
-        CustomerBookingROI Booking = (CustomerBookingROI) r.lookup("Booking");
-        ArrayList<String> x = Booking.ViewConfirmedReservations();
+        CustomerBookingReadOnly hotel = (CustomerBookingReadOnly) r.lookup("CustomerHotelBooking");
+        ArrayList<String> x = hotel.ViewAccepted();
         DefaultTableModel tblModel = (DefaultTableModel) gui.getjTable2().getModel();
         for (int r=0;r<x.size();r++) {
             Document d = Document.parse(x.get(r));
@@ -86,16 +77,9 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
-<<<<<<< HEAD
-        
-               CustomerBookingROI booking = (CustomerBookingROI) r.lookup("Booking");
-                gui.setErrorLabel(booking.AddBooking(UserID, id));
-                
-=======
                BookingFacadeInterface booking = (BookingFacadeInterface) r.lookup("Car");
                 gui.setErrorLabel(booking.SetBookingData(UserID, id));
 
->>>>>>> 0a3793c49f2cb4ac3d2a2f1dfe5b78ad20a0c3a4
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -109,7 +93,7 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                     gui.setVisible(false);
-                   CustomerMenuController guiController = new CustomerMenuController(UserID, new CustomerMenu(), r);
+                   MainMenuController guiController = new MainMenuController(UserID, new CustomerMenu(), r);
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
