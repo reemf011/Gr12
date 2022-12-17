@@ -25,38 +25,7 @@ public class ChooseCarTable extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JButton getKiabtn() {
-        return Kiabtn;
-    }
-
-    public void setKiabtn(JButton Kiabtn) {
-        this.Kiabtn = Kiabtn;
-    }
-
-    public JButton getMercedesbtn() {
-        return Mercedesbtn;
-    }
-
-    public void setMercedesbtn(JButton Mercedesbtn) {
-        this.Mercedesbtn = Mercedesbtn;
-    }
-
-    public JButton getOpelbtn() {
-        return Opelbtn;
-    }
-
-    public void setOpelbtn(JButton Opelbtn) {
-        this.Opelbtn = Opelbtn;
-    }
-
-    public JButton getSkodabtn() {
-        return Skodabtn;
-    }
-
-    public void setSkodabtn(JButton Skodabtn) {
-        this.Skodabtn = Skodabtn;
-    }
-
+    
     public JButton getBookCarbtn() {
         return bookCarbtn;
     }
@@ -141,23 +110,22 @@ public JLabel getErrorLabel() {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        Mercedesbtn = new javax.swing.JButton();
-        Kiabtn = new javax.swing.JButton();
-        Opelbtn = new javax.swing.JButton();
-        Skodabtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         bookCarbtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         ErrorLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -170,39 +138,7 @@ public JLabel getErrorLabel() {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 550, 130));
-
-        Mercedesbtn.setText("Mercedes");
-        Mercedesbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MercedesbtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Mercedesbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 90, 30));
-
-        Kiabtn.setText("Kia");
-        Kiabtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KiabtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Kiabtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 60, 30));
-
-        Opelbtn.setText("Opel");
-        Opelbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpelbtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Opelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 70, 30));
-
-        Skodabtn.setText("Skoda");
-        Skodabtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SkodabtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Skodabtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, -1, 30));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 610, 150));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Yu Gothic Medium", 3, 36)); // NOI18N
@@ -217,7 +153,7 @@ public JLabel getErrorLabel() {
                 bookCarbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(bookCarbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, 130, 30));
+        jPanel1.add(bookCarbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 460, 130, 30));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -229,8 +165,8 @@ public JLabel getErrorLabel() {
         ErrorLabel.setText("jLabel2");
         jPanel1.add(ErrorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 56, 160, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BookingGUi/My project.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -120, -1, 730));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BookingGUi/caaa.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 160, 1070, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -245,26 +181,6 @@ public JLabel getErrorLabel() {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void MercedesbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MercedesbtnActionPerformed
-        
-    }//GEN-LAST:event_MercedesbtnActionPerformed
-
-    private void KiabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KiabtnActionPerformed
-        // TODO add your handling code here:
-        //Audi
-        
-    }//GEN-LAST:event_KiabtnActionPerformed
-
-    private void OpelbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpelbtnActionPerformed
-        
-    }//GEN-LAST:event_OpelbtnActionPerformed
-
-    private void SkodabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SkodabtnActionPerformed
-        // TODO add your handling code here:
-        //Audi
-        
-    }//GEN-LAST:event_SkodabtnActionPerformed
 
     private void bookCarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookCarbtnActionPerformed
 
@@ -307,14 +223,10 @@ public JLabel getErrorLabel() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ErrorLabel;
-    private javax.swing.JButton Kiabtn;
-    private javax.swing.JButton Mercedesbtn;
-    private javax.swing.JButton Opelbtn;
-    private javax.swing.JButton Skodabtn;
     private javax.swing.JButton bookCarbtn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
