@@ -149,8 +149,8 @@ public JLabel getErrorLabel() {
         bookCarbtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         ErrorLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -170,7 +170,7 @@ public JLabel getErrorLabel() {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 550, 130));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 550, 130));
 
         Mercedesbtn.setText("Mercedes");
         Mercedesbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +178,7 @@ public JLabel getErrorLabel() {
                 MercedesbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(Mercedesbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 365, 90, 30));
+        jPanel1.add(Mercedesbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 90, 30));
 
         Kiabtn.setText("Kia");
         Kiabtn.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +186,7 @@ public JLabel getErrorLabel() {
                 KiabtnActionPerformed(evt);
             }
         });
-        jPanel1.add(Kiabtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 365, 60, 30));
+        jPanel1.add(Kiabtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 60, 30));
 
         Opelbtn.setText("Opel");
         Opelbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -194,7 +194,7 @@ public JLabel getErrorLabel() {
                 OpelbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(Opelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 365, 70, 30));
+        jPanel1.add(Opelbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 70, 30));
 
         Skodabtn.setText("Skoda");
         Skodabtn.addActionListener(new java.awt.event.ActionListener() {
@@ -202,13 +202,13 @@ public JLabel getErrorLabel() {
                 SkodabtnActionPerformed(evt);
             }
         });
-        jPanel1.add(Skodabtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 365, -1, 30));
+        jPanel1.add(Skodabtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, -1, 30));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Yu Gothic Medium", 3, 36)); // NOI18N
-        jLabel1.setText("                Car Rental");
+        jLabel1.setText("                                 Car Rental");
         jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 40));
 
         bookCarbtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         bookCarbtn.setText("Book Car");
@@ -217,20 +217,20 @@ public JLabel getErrorLabel() {
                 bookCarbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(bookCarbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 130, 30));
+        jPanel1.add(bookCarbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, 130, 30));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Guest ID:");
         jLabel3.setOpaque(true);
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 80, 30));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 170, 30));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BookingGUi/car.jpg"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 610));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 80, 30));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 170, 30));
 
         ErrorLabel.setText("jLabel2");
         jPanel1.add(ErrorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 56, 160, 70));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BookingGUi/My project.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -120, -1, 730));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -313,8 +313,8 @@ public JLabel getErrorLabel() {
     private javax.swing.JButton Skodabtn;
     private javax.swing.JButton bookCarbtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
