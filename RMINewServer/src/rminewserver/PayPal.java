@@ -11,7 +11,7 @@ import java.rmi.RemoteException;
  *
  * @author DeS
  */
-public class PayPal implements PaymentStrategy{
+public abstract class PayPal implements PaymentStrategy{
     
     private String email;
     private String password;

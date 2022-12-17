@@ -47,7 +47,6 @@ public class LogInServer extends UnicastRemoteObject implements LogInInterface{
         }
     }
 
-    @Override
     public String login(String username, String password) throws RemoteException {
         init();
         
