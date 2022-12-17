@@ -15,14 +15,8 @@ import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
 import rmi.BookingFacadeInterface;
-import rmi.CustomerBookingReadOnly;
-import BookingGUi.BookRoom;
-import CustomerGUi.MainMenu;
-import CustomerGUi.CustomerMenu;
-import CustomerController.MainMenuController;
 import CustomerController.MainMenuController;
 import javax.swing.JFrame;
-
 import BookingGUi.BookRoom;
 
 /**
@@ -113,4 +107,4 @@ public class BookRoomController {
     
     
     
-}
+
