@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/note%20book/Desktop/Grp12/RMINewServer/test/rmi/BookingInterfaceTest.java</file>
+            <file>file:/C:/Users/note%20book/Desktop/Grp12/RMINewServer/test/rmi/UserInterfaceTest.java</file>
+            <file>file:/C:/Users/note%20book/Desktop/Grp12/RMINewServer/src/rmi/BookHotelInterface.java</file>
+            <file>file:/C:/Users/note%20book/Desktop/Grp12/RMINewServer/src/rminewserver/RMINewServer.java</file>
+            <file>file:/C:/Users/note%20book/Desktop/Grp12/RMINewServer/src/rmi/CustomerInterface.java</file>
+        </group>
     </open-files>
 </project-private>

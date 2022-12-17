@@ -14,7 +14,7 @@ import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
-import rmi.BookingInterface;
+import rmi.BookingFacadeInterface;
 import rmi.CustomerBookingReadOnly;
 import BookingGUi.BookRoom;
 import CustomerGUi.MainMenu;
@@ -83,7 +83,7 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
-               BookingInterface booking = (BookingInterface) r.lookup("Car");
+               BookingFacadeInterface booking = (BookingFacadeInterface) r.lookup("Car");
                 gui.setErrorLabel(booking.SetBookingData(UserID, id));
 
             } catch (Exception e) {

@@ -9,7 +9,7 @@ package rminewserver;
  *
  * @author DeS
  */
-public class MasterCard implements PaymentStrategy{
+public abstract class MasterCard implements PaymentStrategy{
  
     private String name;
     private String cardNumber;

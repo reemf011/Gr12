@@ -9,7 +9,7 @@ package rminewserver;
  *
  * @author DeS
  */
-public class Visa implements PaymentStrategy {
+public abstract class Visa implements PaymentStrategy {
     
     private String cardNumber;
     private String name;
