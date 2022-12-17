@@ -15,4 +15,9 @@ public interface BookingFacadeInterface {
    public void SetBookingData(int booking_ID, String booking_date, String booking_status)throws RemoteException;
    public String getBookingData()throws RemoteException;
    public BookingDTO getBooking() throws RemoteException;
+
+    public boolean AddnewBooking(int booking_Id, String Booking_Type, String booking_date, String booking_Status, String booking_time);
+
+    public String ViewBooking(int booking_Id);
+
 }

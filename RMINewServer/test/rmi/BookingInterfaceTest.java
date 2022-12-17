@@ -13,6 +13,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import rminewserver.Booking;
+import rminewserver.BookingDTO;
 import rminewserver.BookingFacadeInterface;
 import rminewserver.Database;
 
@@ -26,8 +28,8 @@ public class BookingInterfaceTest {
     BookingFacadeInterface instance;
     public BookingInterfaceTest() throws RemoteException {
         db = new Database();
-        db.GetCollection("Bookings");
-        instance = new Bookings(db);
+        db.GetCollection("Booking");
+        instance = new Booking(db);
     }
     
     @BeforeClass
@@ -46,60 +48,60 @@ public class BookingInterfaceTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of add booking method
-     */
+    // testing to add a new booking
     
     @Test
     public void testAddBooking() throws Exception {
-//        System.out.println("AddBooking");
-//        int TranscriptID = 892191;
-//        int StudentID = 12;
-//        int CourseID = 5;
-//        char StudentGrade = 'A';
-//        String TransicriptDate = "1/1/1";
-//        String UpdatedDate = "2/2/2";
-//        boolean IsRequested = false;
-//        boolean expResult = true;
-//        boolean result = instance.AddTranscript(TranscriptID, StudentID, CourseID, StudentGrade, TransicriptDate, UpdatedDate, IsRequested);
-//        assertEquals(expResult, result);
+        System.out.println("Add Booking");
+        int booking_Id = 1;
+        String Booking_Type = "Hotel";
+        String booking_date = "14/1/2023";
+        String booking_Status = "Confirmed";
+        String booking_time = "11:00 AM";
+         boolean expResult = true;
+        boolean result = instance.AddnewBooking(booking_Id, Booking_Type, booking_date, booking_Status, booking_time);
+        assertEquals(expResult, result);
     }
 
-    /**
-     * Test of view booking method
-     */
+    // testing to view the booking
+    
     @Test
-    public void testViewTranscript() throws Exception {
-//        System.out.println("ViewTranscript");
-//        int Sid = 15;
-//        int Cid = 9202;
-//        String expResult = "";
-//        String result = instance.ViewTranscript(Sid, Cid);
-//        assertNotEquals(expResult, result);
+    public void testViewBooking() throws Exception {
+        System.out.println("View Booking");
+        int booking_Id = 12045;
+        boolean expResult = true;
+        String result = instance.ViewBooking(booking_Id);
+        assertNotEquals(expResult, result);
     }
 
 
     public class BookingInterfaceImpl implements BookingFacadeInterface {
 
-//        public boolean AddBooking(int TranscriptID, int StudentID, int CourseID, char StudentGrade, String TransicriptDate, String UpdatedDate, boolean IsRequested) throws RemoteException {
-//            return false;
-//        }
-//
-//        public boolean EditBooking(int TranscriptID, int StudentID, int CourseID, char StudentGrade, String TransicriptDate, String UpdatedDate, boolean IsRequested) throws RemoteException {
-//            return false;
-//        }
-//
-//        public boolean deleteBooking(String type, int id, String type2, int id2) throws RemoteException {
-//            return false;
-//        }
-//
-//        public String ViewBooking(int Sid, int Cid) throws RemoteException {
-//            return "";
-//        }
-//
-//        public ArrayList<String> ViewAll(int Sid) throws RemoteException {
-//            return null;
-//        }
-//    }
-}
+        @Override
+        public void SetBookingData(int booking_ID, String booking_date, String booking_status) throws RemoteException {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        @Override
+        public String getBookingData() throws RemoteException {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        @Override
+        public BookingDTO getBooking() throws RemoteException {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        @Override
+        public boolean AddnewBooking(int i, String string, String string1, String string2, String string3) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        @Override
+        public String ViewBooking(int i) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        
+    }
 }

@@ -13,7 +13,7 @@ import java.rmi.server.UnicastRemoteObject;
  *
  * @author reemf011
  */
-public class BookingFacade extends UnicastRemoteObject implements BookingFacadeInterface {
+public abstract class BookingFacade extends UnicastRemoteObject implements BookingFacadeInterface {
     /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
