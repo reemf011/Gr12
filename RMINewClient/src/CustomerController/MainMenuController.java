@@ -129,7 +129,7 @@ public class StudentMainWindowController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 gui.setVisible(false);
-                EvaluationController evaluationController = new EvaluationController(StudentID,new EvaluationStudent(), r);
+                FeedBackController evaluationController = new FeedBackController(StudentID,new EvaluationStudent(), r);
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
