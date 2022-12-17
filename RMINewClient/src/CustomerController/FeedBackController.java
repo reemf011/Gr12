@@ -21,11 +21,8 @@ import CustomerGUi.StudentFeedBack;
 import CustomerGUi.CustomerMenu;
 import javax.swing.JFrame;
 
-/**
- *
- * @author Ahmed
- */
-public class FeedBackController {
+
+ class FeedBackController {
 
     int CustomerID;
     StudentFeedBack gui;
@@ -70,15 +67,14 @@ public class FeedBackController {
         @Override
         public void actionPerformed(ActionEvent ae) {
             try {
-                int courseID = Integer.parseInt(gui.getCourseIDField().getText());
+                int CustomerID = Integer.parseInt(gui.getCourseIDField().getText());
                 String Date = gui.getDateField().getText();
-                int TaRate = Integer.parseInt(gui.getTaRateField().getText());
-                int CurrentRate = Integer.parseInt(gui.getCurrentRateField().getText());
-                String comments = gui.getCommentsField().getText();
+                int Rate = Integer.parseInt(gui.getTaRateField().getText());
+                String Complains = gui.getCommentsField().getText();
 
                 FeedBackInterface feedBackInterface = (FeedBackInterface) r.lookup("FeedBack");
 
-                feedBackInterface.AddNewFeedBack(CustomerID, Date, TaRate, comments);
+                feedBackInterface.AddNewFeedBack(CustomerID, Date, Rate, Complains);
 
                 JOptionPane.showMessageDialog(gui, "Successful Add the Evaluation");
                 FillTable();
