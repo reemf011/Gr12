@@ -14,12 +14,11 @@ import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
-//import rmi.BookingInterface;
+import rmi.BookingFacadeInterface;
 import rmi.CustomerBookingROI;
 import BookingGUi.BookRoom;
 import CustomerGUi.CustomerMenu;
 import CustomerGUi.CustomerMenu;
-import CustomerController.CustomerMenuController;
 import CustomerController.CustomerMenuController;
 import javax.swing.JFrame;
 
@@ -66,8 +65,8 @@ public class BookRoomController {
     }
 
     public void FillTable() throws RemoteException, NotBoundException{
-        CustomerBookingRIO hotel = (CustomerBookingRIO) r.lookup("CustomerHotelBooking");
-        ArrayList<String> x = hotel.ViewAccepted();
+        CustomerBookingROI Booking = (CustomerBookingROI) r.lookup("Booking");
+        ArrayList<String> x = Booking.ViewConfirmedReservations();
         DefaultTableModel tblModel = (DefaultTableModel) gui.getjTable2().getModel();
         for (int r=0;r<x.size();r++) {
             Document d = Document.parse(x.get(r));
@@ -84,8 +83,8 @@ public class BookRoomController {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
         
-               CustomerBookingRIO booking = (CustomerBookingRIO) r.lookup("booking");
-                gui.setErrorLabel(booking.Book(UserID, id));
+               CustomerBookingROI booking = (CustomerBookingROI) r.lookup("Booking");
+                gui.setErrorLabel(booking.AddBooking(UserID, id));
                 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -114,4 +113,4 @@ public class BookRoomController {
     
     
     
-}
+

@@ -5,6 +5,7 @@
  */
 package rminewserver;
 
+import rmi.BookingFacadeInterface;
 import java.rmi.RemoteException;
 import java.rmi.server.RMIClientSocketFactory;
 import java.rmi.server.RMIServerSocketFactory;

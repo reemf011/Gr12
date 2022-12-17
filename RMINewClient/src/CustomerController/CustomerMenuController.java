@@ -81,7 +81,7 @@ public class CustomerMenuController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 gui.setVisible(false);
-               // EditProfileController guiController3 = new EditProfileController(UserID,new EditProfileCustomer(), r);
+               EditProfileController guiController3 = new EditProfileController(UserID,new EditProfileCustomer(), r);
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
