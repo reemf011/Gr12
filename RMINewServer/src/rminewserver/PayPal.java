@@ -5,6 +5,8 @@
  */
 package rminewserver;
 
+import java.rmi.RemoteException;
+
 /**
  *
  * @author DeS
@@ -22,6 +24,21 @@ public abstract class PayPal implements PaymentStrategy{
    // @Override
     public void pay(String amount) {
          System.out.println(amount + "$ paid using Paypal.");
+    }
+
+    @Override
+    public boolean Pay(int type, int PaymentID, int UserID, String date, double amount) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String ViewPayment(String type, int pID) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean AddPayment(int paymeID, int UserID, String date, double amount) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
  
 }

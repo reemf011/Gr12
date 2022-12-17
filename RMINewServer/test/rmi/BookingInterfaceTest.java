@@ -13,9 +13,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+<<<<<<< HEAD
+=======
 import rminewserver.Booking;
 import rminewserver.BookingDTO;
 import rminewserver.BookingFacadeInterface;
+>>>>>>> 0a3793c49f2cb4ac3d2a2f1dfe5b78ad20a0c3a4
 import rminewserver.Database;
 
 /**

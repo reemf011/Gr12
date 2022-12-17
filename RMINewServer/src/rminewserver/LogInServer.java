@@ -6,7 +6,7 @@
 
 package rminewserver;
 
-import rmi.LogInFacade;
+import rmi.LogInInterface;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -21,17 +21,19 @@ import java.util.logging.Logger;
 /**
  *
  * @author Ghadeer
+ * 
+ * 
  */
-public class LogInServer extends UnicastRemoteObject implements LogInFacade{
+/*
+public class LogInServer extends UnicastRemoteObject implements LogInInterface{
 
     private TreeMap clients = new TreeMap<String,String>();
     
     public LogInServer() throws RemoteException{
         super();
     }
-    /**
-     * @param args the command line arguments
-     */
+
+   
     public static void main(String[] args) {
         try {
             Registry reg = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
@@ -88,5 +90,6 @@ public class LogInServer extends UnicastRemoteObject implements LogInFacade{
         clients.put("user1", "1234");
         clients.put("user2", "1234");
     }
-    
+   
 }
+*/

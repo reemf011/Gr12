@@ -5,6 +5,7 @@
  */
 package rminewserver;
 
+import rmi.BookingFacadeInterface;
 import java.rmi.RemoteException;
 import java.rmi.server.RMIClientSocketFactory;
 import java.rmi.server.RMIServerSocketFactory;
@@ -67,6 +68,21 @@ public abstract class BookingFacade extends UnicastRemoteObject implements Booki
         
         BookingDTO dto=new BookingDTO(b.getBooking_Id(),b.getBooking_date() ,b.getBooking_Status());
         return dto;
+    }
+
+    @Override
+    public void CancelBooking(int booking_ID) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void AddBooking(int booking_ID, String booking_data, String booking_status) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void EditBooking(int booking_ID) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      
     

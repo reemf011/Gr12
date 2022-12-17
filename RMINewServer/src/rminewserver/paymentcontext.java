@@ -8,6 +8,8 @@ package rminewserver;
  *
  * @author note book
  */
+
+/*
 public class paymentcontext {
     private PaymentStrategy paymentStrategy;
     
@@ -26,3 +28,4 @@ public class paymentcontext {
         paymentStrategy.pay(amount);
     }
 }
+*/
