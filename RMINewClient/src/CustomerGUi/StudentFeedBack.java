@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 
 public class StudentFeedBack extends javax.swing.JFrame {
 
+  
     public StudentFeedBack() {
         initComponents();
     }
@@ -36,14 +37,12 @@ public class StudentFeedBack extends javax.swing.JFrame {
         BackBtn = new javax.swing.JButton();
         SubmitBtn = new javax.swing.JButton();
         Evaluation = new javax.swing.JLabel();
-        Logo = new javax.swing.JLabel();
         CourseIDlabel1 = new javax.swing.JLabel();
         DateField = new javax.swing.JTextField();
         CourseIDlabel2 = new javax.swing.JLabel();
         TaRateField = new javax.swing.JTextField();
         CommentsField = new javax.swing.JTextField();
         CourseIDlabel4 = new javax.swing.JLabel();
-        WallpaperPicture = new javax.swing.JLabel();
 
         jLabel2.setPreferredSize(new java.awt.Dimension(120, 120));
 
@@ -55,67 +54,51 @@ public class StudentFeedBack extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CourseIDField);
-        CourseIDField.setBounds(120, 330, 200, 30);
+        CourseIDField.setBounds(120, 350, 200, 30);
 
         CourseIDlabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         CourseIDlabel.setText("CustomerID");
         getContentPane().add(CourseIDlabel);
-        CourseIDlabel.setBounds(10, 330, 100, 30);
+        CourseIDlabel.setBounds(10, 350, 100, 30);
 
         jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jTable1.setAutoCreateColumnsFromModel(false);
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "CourseID", "StudentID", "Date", "TaRate", "CurrentRate", "Comments"
+
             }
         ));
         jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("CourseID");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("StudentID");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Date");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("TaRate");
-            jTable1.getColumnModel().getColumn(4).setHeaderValue("CurrentRate");
-            jTable1.getColumnModel().getColumn(5).setHeaderValue("Comments");
-        }
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(40, 120, 680, 150);
 
-        BackBtn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BackBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/z_Pictures/retuen.jpeg"))); // NOI18N
         BackBtn.setText("Back");
+        BackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackBtnActionPerformed(evt);
+            }
+        });
         getContentPane().add(BackBtn);
-        BackBtn.setBounds(40, 500, 80, 30);
+        BackBtn.setBounds(30, 500, 90, 30);
 
         SubmitBtn.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         SubmitBtn.setText("Submit FeedBack");
-        SubmitBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubmitBtnActionPerformed(evt);
-            }
-        });
         getContentPane().add(SubmitBtn);
         SubmitBtn.setBounds(260, 480, 290, 40);
 
         Evaluation.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         Evaluation.setText("FeedBack");
         getContentPane().add(Evaluation);
-        Evaluation.setBounds(340, 90, 90, 30);
-
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/z_Pictures/Logo100.png"))); // NOI18N
-        Logo.setText("jLabel3");
-        getContentPane().add(Logo);
-        Logo.setBounds(0, 0, 100, 90);
+        Evaluation.setBounds(330, 70, 90, 30);
 
         CourseIDlabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         CourseIDlabel1.setText("Date");
         getContentPane().add(CourseIDlabel1);
-        CourseIDlabel1.setBounds(40, 400, 100, 30);
+        CourseIDlabel1.setBounds(20, 400, 100, 30);
 
         DateField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,12 +106,12 @@ public class StudentFeedBack extends javax.swing.JFrame {
             }
         });
         getContentPane().add(DateField);
-        DateField.setBounds(120, 390, 200, 30);
+        DateField.setBounds(120, 400, 200, 30);
 
         CourseIDlabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         CourseIDlabel2.setText("Rate");
         getContentPane().add(CourseIDlabel2);
-        CourseIDlabel2.setBounds(420, 320, 100, 30);
+        CourseIDlabel2.setBounds(380, 340, 100, 30);
 
         TaRateField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +119,7 @@ public class StudentFeedBack extends javax.swing.JFrame {
             }
         });
         getContentPane().add(TaRateField);
-        TaRateField.setBounds(540, 320, 200, 30);
+        TaRateField.setBounds(490, 340, 200, 30);
 
         CommentsField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,17 +127,12 @@ public class StudentFeedBack extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CommentsField);
-        CommentsField.setBounds(540, 390, 200, 30);
+        CommentsField.setBounds(490, 400, 200, 30);
 
         CourseIDlabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         CourseIDlabel4.setText("Complain");
         getContentPane().add(CourseIDlabel4);
-        CourseIDlabel4.setBounds(410, 390, 110, 30);
-
-        WallpaperPicture.setForeground(new java.awt.Color(157, 133, 69));
-        WallpaperPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/z_Pictures/background.jpeg"))); // NOI18N
-        getContentPane().add(WallpaperPicture);
-        WallpaperPicture.setBounds(0, 0, 750, 600);
+        CourseIDlabel4.setBounds(360, 400, 110, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void CourseIDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CourseIDFieldActionPerformed
@@ -173,9 +151,9 @@ public class StudentFeedBack extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CommentsFieldActionPerformed
 
-    private void SubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitBtnActionPerformed
+    private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SubmitBtnActionPerformed
+    }//GEN-LAST:event_BackBtnActionPerformed
 
     public JButton getBackBtn() {
         return BackBtn;
@@ -185,6 +163,7 @@ public class StudentFeedBack extends javax.swing.JFrame {
         return CommentsField;
     }
 
+ 
     public JTextField getDateField() {
         return DateField;
     }
@@ -207,20 +186,14 @@ public class StudentFeedBack extends javax.swing.JFrame {
         return Evaluation;
     }
 
-    public JLabel getLogo() {
-        return Logo;
-    }
+ 
 
     public JButton getSubmitBtn() {
         return SubmitBtn;
     }
 
 
-    public JLabel getWallpaperPicture() {
-        return WallpaperPicture;
-    }
 
- 
     public JLabel getjLabel2() {
         return jLabel2;
     }
@@ -260,10 +233,8 @@ public class StudentFeedBack extends javax.swing.JFrame {
     private javax.swing.JLabel CourseIDlabel4;
     private javax.swing.JTextField DateField;
     private javax.swing.JLabel Evaluation;
-    private javax.swing.JLabel Logo;
     private javax.swing.JButton SubmitBtn;
     private javax.swing.JTextField TaRateField;
-    private javax.swing.JLabel WallpaperPicture;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
