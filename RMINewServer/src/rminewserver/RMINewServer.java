@@ -23,15 +23,39 @@ import rmi.CustomerInterface;
  */
 public class RMINewServer {
 
-    static Customer s1;
-    static Customer s2;
-    static Car c1;
-    static Car c2;
-    static Hotel h1;
-    static Hotel h2;
+   
 
-    public static void main(String[] args) throws RemoteException, AlreadyBoundException {
-     Registry r = LocateRegistry.createRegistry(1099);
+    public static void main(String[] args) {
+            try {
+            // My remote object [Skeleton]
+            CustomerInterface c = new Customer();
+            LogInInterface l = new Login();
+            DatabaseInterface D = new Database();
+            BookingFacade b = new booking();
+
+            // My RMI Registry
+            
+            Registry registry = LocateRegistry.createRegistry(500);
+            
+            //Add my object to the RMI Registry
+            // Now we have added the remote object in the RMI registry
+            // The bind function take two things, unqiue name for the object and the remoted object
+            registry.bind("cust", c);
+            registry.bind("login", l);
+            registry.bind("booking", b);
+
+   
+            
+            System.out.println("My server is ready...");   
+        } catch (Exception ex) {
+           System.out.println("Exception occured");
+        }   
+
+        
+        
+        
+        
+        /*   Registry r = LocateRegistry.createRegistry(1099);
         DatabaseInterface dbb = new Database(1);
         r.bind("Database", dbb);
         Database db;
@@ -61,7 +85,7 @@ public class RMINewServer {
                 check = false;
             }
         }
-
+*/
     }
         
         
@@ -82,7 +106,18 @@ public class RMINewServer {
         
         
          
-     /* //Observer Design Pattern Application - Reem 197957   
+     /* 
+
+
+    static Customer s1;
+    static Customer s2;
+    static Car c1;
+    static Car c2;
+    static Hotel h1;
+    static Hotel h2;
+
+
+    //Observer Design Pattern Application - Reem 197957   
      Admin a = new Admin();
      Customer cust1 = new Customer(12,"Omar", "1234_Omar","Omar7863@ gmail.com");
      

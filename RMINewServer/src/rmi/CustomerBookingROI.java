@@ -9,8 +9,12 @@ package rmi;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+<<<<<<< HEAD
+import org.bson.Document;
+=======
 import javax.swing.text.Document;
 //import org.bson.Document;
+>>>>>>> 0a3793c49f2cb4ac3d2a2f1dfe5b78ad20a0c3a4
 
 /**
  *

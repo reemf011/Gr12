@@ -48,8 +48,5 @@ public class BookingDTO implements Serializable {
 
   
     public void checkAvailability(){}
-    public void CancelBooking(){}
-    public void AddBooking(){}
-    public void EditBooking(){}
-    
+
 }

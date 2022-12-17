@@ -16,7 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import rmi.RoomManager;
-import CustomerGUi.MainMenu;
+import CustomerGUi.CustomerMenu;
 
 public class BookRoom extends javax.swing.JFrame {
 
@@ -46,6 +46,7 @@ public class BookRoom extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        ErrorLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 550, 375));
@@ -107,6 +108,8 @@ public class BookRoom extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(550, 375));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 650, 520);
+        getContentPane().add(ErrorLabel);
+        ErrorLabel.setBounds(100, 340, 0, 0);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,7 +120,7 @@ public class BookRoom extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonBookActionPerformed
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
-        new MainMenu().setVisible(true);
+        new CustomerMenu().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButtonBackActionPerformed
 
@@ -151,6 +154,14 @@ public class BookRoom extends javax.swing.JFrame {
 
     public JTable getjTable2() {
         return jTable2;
+    }
+
+    public JLabel getErrorLabel() {
+        return ErrorLabel;
+    }
+
+    public void setErrorLabel(String ErrorLabel) {
+        this.ErrorLabel.setText(ErrorLabel);
     }
 
     
@@ -193,6 +204,7 @@ public class BookRoom extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ErrorLabel;
     private javax.swing.JButton jButtonBack;
     private javax.swing.JButton jButtonBook;
     private javax.swing.JLabel jLabel1;
