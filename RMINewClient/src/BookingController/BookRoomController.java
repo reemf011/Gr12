@@ -15,7 +15,11 @@ import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
 import rmi.BookingFacadeInterface;
+<<<<<<< HEAD
 import rmi.CustomerBookingROI;
+=======
+import rmi.CustomerBookingReadOnly;
+>>>>>>> 0a3793c49f2cb4ac3d2a2f1dfe5b78ad20a0c3a4
 import BookingGUi.BookRoom;
 import CustomerGUi.CustomerMenu;
 import CustomerGUi.CustomerMenu;
@@ -82,10 +86,16 @@ public class BookRoomController {
         public void actionPerformed(ActionEvent ae) {
             try {
                 int id = parseInt(gui.getjTextField1().getText());
+<<<<<<< HEAD
         
                CustomerBookingROI booking = (CustomerBookingROI) r.lookup("Booking");
                 gui.setErrorLabel(booking.AddBooking(UserID, id));
                 
+=======
+               BookingFacadeInterface booking = (BookingFacadeInterface) r.lookup("Car");
+                gui.setErrorLabel(booking.SetBookingData(UserID, id));
+
+>>>>>>> 0a3793c49f2cb4ac3d2a2f1dfe5b78ad20a0c3a4
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
