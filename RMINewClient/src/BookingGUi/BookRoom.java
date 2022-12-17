@@ -99,7 +99,7 @@ public class BookRoom extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("Number");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 260, 70, 22);
+        jLabel2.setBounds(80, 260, 70, 21);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(150, 260, 120, 22);
 

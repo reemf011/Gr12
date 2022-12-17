@@ -12,70 +12,70 @@ import java.util.ArrayList;
  * @author DeS
  */
 public class FlightTicket {
-    int Flight_ID;
-    String Flight_price;
-    String Flight_destination;
-    String arrival_Airport;
-    String arrival_date;
-    String departure_Airport;
+    int FlightNumber;
+    String FlightDeparture;
+    String FlightArrival;
+    String SeatType;
+    String Date;
+    String Time;
     ArrayList<Chooseseatinterface>availableSeats;
 
-    public FlightTicket(int Flight_ID, String Flight_price, String Flight_destination, String arrival_Airport, String arrival_date, String departure_Airport, ArrayList<Chooseseatinterface> availableSeats) {
-        this.Flight_ID = Flight_ID;
-        this.Flight_price = Flight_price;
-        this.Flight_destination = Flight_destination;
-        this.arrival_Airport = arrival_Airport;
-        this.arrival_date = arrival_date;
-        this.departure_Airport = departure_Airport;
+    public FlightTicket(int FlightNumber, String FlightDeparture, String FlightArrival, String SeatType, String Date, String Time, ArrayList<Chooseseatinterface> availableSeats) {
+        this.FlightNumber = FlightNumber;
+        this.FlightDeparture = FlightDeparture;
+        this.FlightArrival = FlightArrival;
+        this.SeatType = SeatType;
+        this.Date = Date;
+        this.Time = Time;
         this.availableSeats = availableSeats;
     }
 
-    public int getFlight_ID() {
-        return Flight_ID;
+    public int getFlightNumber() {
+        return FlightNumber;
     }
 
-    public void setFlight_ID(int Flight_ID) {
-        this.Flight_ID = Flight_ID;
+    public void setFlightNumber(int FlightNumber) {
+        this.FlightNumber = FlightNumber;
     }
 
-    public String getFlight_price() {
-        return Flight_price;
+    public String getFlightDeparture() {
+        return FlightDeparture;
     }
 
-    public void setFlight_price(String Flight_price) {
-        this.Flight_price = Flight_price;
+    public void setFlightDeparture(String FlightDeparture) {
+        this.FlightDeparture = FlightDeparture;
     }
 
-    public String getFlight_destination() {
-        return Flight_destination;
+    public String getFlightArrival() {
+        return FlightArrival;
     }
 
-    public void setFlight_destination(String Flight_destination) {
-        this.Flight_destination = Flight_destination;
+    public void setFlightArrival(String FlightArrival) {
+        this.FlightArrival = FlightArrival;
     }
 
-    public String getArrival_Airport() {
-        return arrival_Airport;
+    public String getSeatType() {
+        return SeatType;
     }
 
-    public void setArrival_Airport(String arrival_Airport) {
-        this.arrival_Airport = arrival_Airport;
+    public void setSeatType(String SeatType) {
+        this.SeatType = SeatType;
     }
 
-    public String getArrival_date() {
-        return arrival_date;
+    public String getDate() {
+        return Date;
     }
 
-    public void setArrival_date(String arrival_date) {
-        this.arrival_date = arrival_date;
+    public void setDate(String Date) {
+        this.Date = Date;
     }
 
-    public String getDeparture_Airport() {
-        return departure_Airport;
+    public String getTime() {
+        return Time;
     }
 
-    public void setDeparture_Airport(String departure_Airport) {
-        this.departure_Airport = departure_Airport;
+    public void setTime(String Time) {
+        this.Time = Time;
     }
 
     public ArrayList<Chooseseatinterface> getAvailableSeats() {
