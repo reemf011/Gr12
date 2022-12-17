@@ -51,7 +51,7 @@ import java.util.ArrayList;
         }
     }
 
- // Read-only design pattern - sheroq Hesham 199818
+ // singelton design pattern - sheroq Hesham 199818
     
     
 
