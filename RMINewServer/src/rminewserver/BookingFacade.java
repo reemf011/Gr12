@@ -69,6 +69,21 @@ public class BookingFacade extends UnicastRemoteObject implements BookingFacadeI
         BookingDTO dto=new BookingDTO(b.getBooking_Id(),b.getBooking_date() ,b.getBooking_Status());
         return dto;
     }
+
+    @Override
+    public void CancelBooking(int booking_ID) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void AddBooking(int booking_ID, String booking_data, String booking_status) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void EditBooking(int booking_ID) throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      
     
     
