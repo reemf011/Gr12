@@ -6,6 +6,7 @@
 package CustomerController;
 
 //import roommanager.Options;
+import CustomerGUi.CustomerMenu;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -30,14 +31,14 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import rmi.RoomManager;
 
-public class Customer extends JFrame{
+public class CustomerController extends JFrame{
     
     private JPanel contentPane;
     private JTable table;
     private JLabel label1;
     private JButton btn1;
     
-    public Customer() throws RemoteException, NotBoundException {
+    public CustomerController() throws RemoteException, NotBoundException {
 		super("Customer list");
 		
 		
@@ -80,5 +81,9 @@ public class Customer extends JFrame{
 		contentPane.add(sp, BorderLayout.CENTER);
                 
 	}
+
+    CustomerController(int CustomerID, CustomerMenu customerMenu, Registry r) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

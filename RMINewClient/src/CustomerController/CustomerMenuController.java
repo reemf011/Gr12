@@ -153,6 +153,36 @@ public class CustomerMenuController {
     }
     
 
+<<<<<<< HEAD:RMINewClient/src/CustomerController/CustomerMenuController.java
+=======
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            try {
+                gui.setVisible(false);
+                TranscriptController transcriptController = new TranscriptController(StudentID,new TranscriptStudent(), r);
+
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        
+    }
+    
+    class EvaluationAction implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            try {
+                gui.setVisible(false);
+                FeedBackController evaluationController = new FeedBackController(StudentID,new EvaluationStudent(), r);
+
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        
+    }
+>>>>>>> 02e6fe50710c806adddcbd4c9cd42cd192d7c240:RMINewClient/src/CustomerController/MainMenuController.java
 
     class LogoutAction implements ActionListener {
 
