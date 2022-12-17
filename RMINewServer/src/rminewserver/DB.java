@@ -13,6 +13,7 @@ import com.mongodb.client.model.Updates;
 import java.rmi.RemoteException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.text.Document;
 import org.bson.Document;
 
 /**

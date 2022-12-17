@@ -3,89 +3,92 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rminewserver;
-import com.mongodb.MongoClient;
-import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
-import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
-import com.google.gson.Gson;
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.bson.Document;
+
+import java.util.Scanner;
+import java.io.Serializable;
+
+
 /**
  *
- * @author DeS
+ * @author user
  */
-public class Car {
-    int BookID;
-    int Time;
-    String Location;
-    String CarType;
-    int Car_Price;
- DB db ; 
+public class Car implements Serializable {
+
+     
+     
+
+    static void displayCarInfo(String Rental_duartion, int Yearofproduction, String Price) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    int Car_id;
+    int Price;
+    String Car_model;
+    String Rental_Duration;
+    int Year_of_Production;
+
+   
+    public Car(int Car_id, int Price, String Car_model, String Rental_Duration, int Year_of_Production) {
+        this.Car_id = Car_id;
+        this.Price = Price;
+        this.Car_model = Car_model;
+        this.Rental_Duration = Rental_Duration;
+        this.Year_of_Production = Year_of_Production;
+    }
+     
+     
+
+     
+    Scanner x = new Scanner(System.in);
+
+  
+    Car() {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
     
-    public Car() throws RemoteException{
-         db=new DB();
-        db.mongoClient = new MongoClient();
-        db.database = db.mongoClient.getDatabase("ReservationSystem");
-    }
 
-    public Car(int BookID, int Time, String Location, String CarType, int Car_Price) {
-        this.BookID = BookID;
-        this.Time = Time;
-        this.Location = Location;
-        this.CarType = CarType;
-        this.Car_Price = Car_Price;
-    }
+   public void chooseCar(){
     
-    
-    public int getBookID() {
-        return BookID;
-    }
+      System.out.println(Car_id);
 
-    public void setBookID(int BookID) {
-        this.BookID = BookID;
-    }
+     System.out.println("Enter price Range:\n");
+     Price=x.nextInt();
+     System.out.println("Enter the model:\n");
+     Car_model=x.nextLine();
+     System.out.println("Enter Year of Production:\n");
+     Year_of_Production=x.nextInt();
+     System.out.println("Enter Rental Duration:\n");
+     Rental_Duration=x.nextLine();
 
-    public int getTime() {
-        return Time;
-    }
-
-    public void setTime(int Time) {
-        this.Time = Time;
-    }
-
-    public String getLocation() {
-        return Location;
-    }
-
-    public void setLocation(String Location) {
-        this.Location = Location;
-    }
-
-    public String getCarType() {
-        return CarType;
-    }
-
-    public void setCarType(String CarType) {
-        this.CarType = CarType;
-    }
-
-    public int getCar_Price() {
-        return Car_Price;
-    }
-
-    public void setCar_Price(int Car_Price) {
-        this.Car_Price = Car_Price;
-    }
-    public void ChooseCar(){}
-    public void displayCarinfo(){}
-    public void Rentalform(){}
 }
+   
+    @Override
+     public String toString() {
+    return this.Car_id+"-"+this.Price+"-"+this.Car_model+"-"+this.Rental_Duration+"-"+this.Year_of_Production;
+     }
+
+ public void displayCarInfo(){
+        System.out.println ("{" + "Price=" + Price + ", Car_model=" + Car_model + ", Year_of_Production=" + Year_of_Production + ", Rental_Duration=" + Rental_Duration + "}");
+    }
+   
+ 
+ 
+ 
+ 
+ public void RentalForm(){
+      String RentalForm="";
+     if (makeBooking()==true){
+     System.out.print ( "You can fill rental car form \n");
+     this.chooseCar();
+     this.displayCarInfo();
+     }
+
+}
+
+    private boolean makeBooking() {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }   }
+
