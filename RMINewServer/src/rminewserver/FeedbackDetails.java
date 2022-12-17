@@ -10,10 +10,6 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import rmi.FeedBackInterface;
 
-/**
- *
- * @author DeS
- */
 public class FeedbackDetails extends UnicastRemoteObject  implements FeedBackInterface {
     
    
